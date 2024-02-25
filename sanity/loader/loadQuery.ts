@@ -12,8 +12,8 @@ import {
 } from '@/sanity/lib/queries'
 import { token } from '@/sanity/lib/token'
 import {
-  HomePagePayload,
   BlogPagePayload,
+  HomePagePayload,
   ProjectPayload,
   SettingsPayload,
 } from '@/types'

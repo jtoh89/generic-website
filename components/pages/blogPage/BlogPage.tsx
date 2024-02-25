@@ -10,7 +10,7 @@ export interface PageProps {
 }
 
 export function BlogPage({ data }: PageProps) {
-  console.log('JonO BlogPage: ', data)
+  // console.log('JonO BlogPage: ', data)
 
   const { headerImage, body, overview, title } = data ?? {}
 

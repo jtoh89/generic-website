@@ -1,0 +1,153 @@
+.test {
+  background-color: black;
+  height: 100px;
+}
+
+.mainLayout {
+  padding: 25px 15px;
+}
+
+.innerLayout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width-1);
+  margin: auto;
+}
+
+.logo {
+  width: auto;
+  height: 48px;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  margin: 0px 10px;
+  color: var(--black);
+}
+
+.menu a:hover {
+  color: var(--themeColor);
+}
+
+.signUp {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--white);
+  background: var(--black);
+  border: none;
+  border-radius: 20px;
+  padding: 5px 9px;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.signUp:hover {
+  color: var(--white);
+  background: var(--themeColor);
+}
+
+.mobile {
+  display: none;
+}
+
+.mobileNav {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.navCloseContainer {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainLayout {
+    padding: 15px;
+  }
+
+  .navCloseContainer {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .navClose {
+    display: flex;
+    margin: 15px 15px 15px auto;
+    float: right;
+    z-index: 4;
+    color: var(--black);
+    cursor: pointer;
+  }
+
+  .navClose:hover {
+    color: var(--themeColor);
+  }
+
+  .mobileNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width-1);
+    margin: auto;
+  }
+
+  .hamburger {
+    /* position: absolute; */
+    display: flex;
+    cursor: pointer;
+    right: 0;
+    margin: auto 0;
+    margin-left: auto;
+    /* margin-right: 15px; */
+  }
+
+  .innerLayout {
+    z-index: 15;
+    background-color: rgb(225, 225, 225) !important;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+    justify-content: unset;
+  }
+
+  .active {
+    right: 0;
+  }
+  /*
+  .logo {
+    height: 30px;
+  } */
+
+  .menu {
+    margin: 50px 0;
+    align-items: end;
+    justify-content: unset;
+  }
+
+  .menu ul {
+    display: grid;
+    gap: 10px;
+    padding: 0;
+  }
+  .signUp {
+    font-size: 15px;
+  }
+}
