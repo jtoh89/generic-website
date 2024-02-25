@@ -38,6 +38,7 @@ export interface HomePagePayload {
 
 export interface PagePayload {
   body?: PortableTextBlock[]
+  headerImage?: Image
   name?: string
   overview?: PortableTextBlock[]
   title?: string

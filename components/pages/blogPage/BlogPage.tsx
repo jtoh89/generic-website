@@ -1,5 +1,8 @@
+import Image from 'next/image'
+
 import { CustomPortableText } from '@/components/shared/CustomPortableText'
 import { Header } from '@/components/shared/Header'
+import { urlForImage } from '@/sanity/lib/image'
 import type { PagePayload } from '@/types'
 
 export interface PageProps {
@@ -7,8 +10,9 @@ export interface PageProps {
 }
 
 export function BlogPage({ data }: PageProps) {
-  // Default to an empty object to allow previews on non-existent documents
-  const { body, overview, title } = data ?? {}
+  console.log('JonO BlogPage: ', data)
+
+  const { headerImage, body, overview, title } = data ?? {}
 
   return (
     <div>
@@ -16,6 +20,15 @@ export function BlogPage({ data }: PageProps) {
         {/* Header */}
         <Header title={title} description={overview} />
 
+        {headerImage && (
+          <Image
+            className="post__cover"
+            src={urlForImage(headerImage).url()}
+            height={231}
+            width={367}
+            alt=""
+          />
+        )}
         {/* Body */}
         {body && (
           <CustomPortableText
