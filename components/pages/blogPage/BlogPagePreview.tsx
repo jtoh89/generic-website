@@ -6,7 +6,7 @@ import { pagesBySlugQuery } from '@/sanity/lib/queries'
 import { useQuery } from '@/sanity/loader/useQuery'
 import { PagePayload } from '@/types'
 
-import Page from './Page'
+import BlogPage from './BlogPage'
 
 type Props = {
   params: { slug: string }
@@ -19,5 +19,5 @@ export default function PagePreview(props: Props) {
     initial,
   })
 
-  return <Page data={data!} />
+  return <BlogPage data={data!} />
 }
