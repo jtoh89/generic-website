@@ -36,7 +36,7 @@ export interface HomePagePayload {
   title?: string
 }
 
-export interface PagePayload {
+export interface BlogPagePayload {
   body?: PortableTextBlock[]
   headerImage?: Image
   name?: string
