@@ -15,8 +15,9 @@ export function BlogPage({ data }: PageProps) {
   const { headerImage, body, overview, title } = data ?? {}
 
   return (
-    <div>
-      <div className="mb-14">
+    <section className="post">
+      <div className="post__content">
+        {/* <div className="mb-14"> */}
         {/* Header */}
         <Header title={title} description={overview} />
 
@@ -36,9 +37,10 @@ export function BlogPage({ data }: PageProps) {
             value={body}
           />
         )}
+        {/* </div> */}
+        {/* <div className="absolute left-0 w-screen border-t" /> */}
       </div>
-      <div className="absolute left-0 w-screen border-t" />
-    </div>
+    </section>
   )
 }
 

@@ -1,5 +1,5 @@
 import type { PortableTextBlock } from '@portabletext/types'
-import type { Image } from 'sanity'
+import type { Image, ImageAsset } from 'sanity'
 
 export interface MenuItem {
   _type: string
@@ -38,7 +38,7 @@ export interface HomePagePayload {
 
 export interface BlogPagePayload {
   body?: PortableTextBlock[]
-  headerImage?: Image
+  headerImage?: ImageAsset
   name?: string
   overview?: PortableTextBlock[]
   title?: string
