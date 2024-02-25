@@ -40,19 +40,19 @@
   color: var(--themeColor);
 }
 
-.signUp {
-  font-size: 14px;
+.contact {
+  /* font-size: 14px; */
   font-weight: 400;
   color: var(--white);
   background: var(--black);
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 5px 9px;
   cursor: pointer;
   padding: 15px;
 }
 
-.signUp:hover {
+.contact:hover {
   color: var(--white);
   background: var(--themeColor);
 }
@@ -147,7 +147,7 @@
     gap: 10px;
     padding: 0;
   }
-  .signUp {
-    font-size: 15px;
+  .contact {
+    /* font-size: 15px; */
   }
 }

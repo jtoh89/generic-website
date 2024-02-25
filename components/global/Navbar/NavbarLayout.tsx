@@ -79,8 +79,8 @@ export default function Navbar(props: NavbarProps) {
             </li>
           </ul>
         </div>
-        <div className={styles.authContainer}>
-          <button className={styles.signUp}>Work with us</button>
+        <div>
+          <button className={styles.contact}>Work with us</button>
         </div>
       </div>
     </div>
