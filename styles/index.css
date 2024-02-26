@@ -156,7 +156,7 @@ body {
 @media (min-width: 800px) {
   .post .post__cover,
   .post .post__cover--none {
-    width: 750px;
+    /* width: 750px; */
     height: 380px;
   }
 
