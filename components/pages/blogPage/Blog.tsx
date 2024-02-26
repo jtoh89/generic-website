@@ -1,3 +1,7 @@
+'use client'
+
+import React, { useState } from 'react'
+
 import { toPlainText } from '@portabletext/react'
 import { Pagination } from 'antd'
 import { Tag } from 'antd'
@@ -16,8 +20,6 @@ export interface Props {
 }
 
 const BlogCard = ({ headerImage, slug, title, overview }) => {
-  console.log('BlogCard headerImage: ', headerImage)
-
   return (
     <Link href={`/blog/${slug}`}>
       <div className={styles.blogCard}>
@@ -41,14 +43,24 @@ const BlogCard = ({ headerImage, slug, title, overview }) => {
 }
 
 export function Blog({ data }: Props) {
-  //   const { headerImage, body, overview, title } = data ?? {}
+  const itemsPerPage = 6
+  const totalItems = data?.length || 0
+  const [currentPage, setCurrentPage] = useState(1)
 
+  const startIndex = (currentPage - 1) * itemsPerPage
+  const endIndex = Math.min(startIndex + itemsPerPage, totalItems)
+
+  const itemsToDisplay = data?.slice(startIndex, endIndex)
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page)
+  }
   return (
     <div className={styles.blogContainer}>
       <h2>Blog Page</h2>
 
       <div className={styles.innerContainer}>
-        {data?.map((blog, i) => (
+        {itemsToDisplay?.map((blog, i) => (
           <BlogCard
             key={i}
             title={blog.title}
@@ -58,16 +70,16 @@ export function Blog({ data }: Props) {
           />
         ))}
       </div>
-      {/* <div className={styles.paginatin}>
-          <Pagination
-            current={currentPage}
-            onChange={handlePageChange}
-            total={totalItems}
-            pageSize={itemsPerPage}
-            responsive={true}
-            showSizeChanger={false}
-          />
-        </div> */}
+      <div className={styles.paginatin}>
+        <Pagination
+          current={currentPage}
+          onChange={handlePageChange}
+          total={totalItems}
+          pageSize={itemsPerPage}
+          responsive={true}
+          showSizeChanger={false}
+        />
+      </div>
     </div>
   )
 }
