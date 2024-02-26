@@ -8,9 +8,10 @@
 .innerContainer {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
+  /* background-color: red; */
   /* flex-wrap: wrap; */
-  align-items: center;
+  /* align-items: center; */
 }
 
 .paginatin {
@@ -22,7 +23,10 @@
 
 /*BLOG CARD*/
 .blogCard {
+  height: 348px;
   width: 200px;
+  box-shadow: var(--box-shadow);
+  border-radius: 8px;
 }
 
 .blogCardImageContainer {
@@ -33,20 +37,21 @@
 }
 
 .blogCardImage {
-  border-radius: 20px 20px 0 0;
+  border-radius: 8px 8px 0 0;
 }
 
-.cardFooter h4 {
-  /* margin: 13px 13px 0 13px; */
-  font-size: var(--font-size-s);
-  line-height: 28px;
+.cardFooter {
+  padding: 8px;
+}
+
+.cardFooter h2 {
+  font-size: var(--font-size-3);
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
 .cardFooter p {
-  /* margin: 5px 80px 0 13px; */
-  max-width: auto;
-  font-size: var(--font-size-xs);
-  line-height: 20px;
+  font-size: var(--font-size-2);
 }
 
 .span {

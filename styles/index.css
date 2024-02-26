@@ -68,6 +68,8 @@ ol {
 
   --max-width-0: 320px;
   --max-width-1: 768px;
+
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 html {

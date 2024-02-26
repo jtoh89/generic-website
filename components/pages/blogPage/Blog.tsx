@@ -31,7 +31,7 @@ const BlogCard = ({ headerImage, slug, title, overview }) => {
           />
         </div>
         <div className={styles.cardFooter}>
-          <h4>{title}</h4>
+          <h2>{title}</h2>
           {/* <span className={styles.span}>{date}</span> */}
           <p>{toPlainText(overview)}</p>
         </div>
