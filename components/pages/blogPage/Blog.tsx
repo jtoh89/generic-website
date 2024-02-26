@@ -41,16 +41,10 @@ const BlogCard = ({ headerImage, slug, title, overview }) => {
 }
 
 export function Blog({ data }: Props) {
-  console.log('JonO Blog: ', data)
-
-  data?.forEach((element) => {
-    console.log('Blog data:', element)
-  })
-
   //   const { headerImage, body, overview, title } = data ?? {}
 
   return (
-    <div className={styles.container}>
+    <div className={styles.blogContainer}>
       <h2>Blog Page</h2>
 
       <div className={styles.innerContainer}>

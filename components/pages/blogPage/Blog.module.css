@@ -1,15 +1,15 @@
-.container {
-  max-width: var(--max-width);
+.blogContainer {
+  max-width: var(--max-width-1);
   margin: var(--standard-margin);
-  padding: 0 var(--standard-spacing-x) var(--standard-spacing-y)
-    var(--standard-spacing-x);
 }
 
 .innerContainer {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  /* background-color: red; */
+  background-color: red;
   /* flex-wrap: wrap; */
   /* align-items: center; */
 }
@@ -24,13 +24,13 @@
 /*BLOG CARD*/
 .blogCard {
   height: 348px;
-  width: 200px;
+  /* width: 200px; */
   box-shadow: var(--box-shadow);
   border-radius: 8px;
 }
 
 .blogCardImageContainer {
-  height: 100px;
+  height: 200px;
   /* width: 200px; */
   box-shadow: var(--box-shadow);
   position: relative;
@@ -68,22 +68,14 @@
   margin: 0 29px 13px 13px;
 }
 
-@media only screen and (max-width: 1440px) {
-  .blogContainer {
-    gap: 27px;
-    padding: 0px 50px 50px 50px;
+@media only screen and (max-width: 1200px) {
+  .innerContainer {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-@media only screen and (max-width: 1350px) {
-  .blogContainer {
-    gap: 27px;
-    padding: 0px 50px 50px 50px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .blogContainer {
-    padding: 0 36px 45px;
+@media only screen and (max-width: 768px) {
+  .innerContainer {
+    grid-template-columns: 1fr;
   }
 }

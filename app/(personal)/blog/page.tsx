@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation'
 
 import { Blog } from '@/components/pages/blogPage/Blog'
 import { generateStaticSlugs } from '@/sanity/loader/generateStaticSlugs'
-import { allBlogPages, loadPage } from '@/sanity/loader/loadQuery'
+import { allBlogPages } from '@/sanity/loader/loadQuery'
 
 const PagePreview = dynamic(() => import('@/components/pages/blogPage/Blog'))
 
@@ -28,9 +28,9 @@ export default async function PageSlugRoute(Props) {
 
   console.log('JonO blog page initial:', initial)
 
-  if (draftMode().isEnabled) {
-    return <PagePreview data={initial} />
-  }
+  // if (draftMode().isEnabled) {
+  //   return <PagePreview data={initial} />
+  // }
 
   if (!initial.data) {
     notFound()
