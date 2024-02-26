@@ -38,11 +38,18 @@ export interface HomePagePayload {
 
 export interface BlogPagePayload {
   body?: PortableTextBlock[]
-  headerImage?: ImageAsset
+  headerImage?: Image
   name?: string
   overview?: PortableTextBlock[]
   title?: string
   slug?: string
+}
+
+export interface BlogPayload {
+  title?: string
+  slug?: string
+  headerImage?: Image
+  overview?: PortableTextBlock[]
 }
 
 export interface ProjectPayload {

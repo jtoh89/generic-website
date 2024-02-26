@@ -1,0 +1,84 @@
+.container {
+  max-width: var(--max-width);
+  margin: var(--standard-margin);
+  padding: 0 var(--standard-spacing-x) var(--standard-spacing-y)
+    var(--standard-spacing-x);
+}
+
+.innerContainer {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  /* flex-wrap: wrap; */
+  align-items: center;
+}
+
+.paginatin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+/*BLOG CARD*/
+.blogCard {
+  width: 200px;
+}
+
+.blogCardImageContainer {
+  height: 100px;
+  /* width: 200px; */
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+
+.blogCardImage {
+  border-radius: 20px 20px 0 0;
+}
+
+.cardFooter h4 {
+  /* margin: 13px 13px 0 13px; */
+  font-size: var(--font-size-s);
+  line-height: 28px;
+}
+
+.cardFooter p {
+  /* margin: 5px 80px 0 13px; */
+  max-width: auto;
+  font-size: var(--font-size-xs);
+  line-height: 20px;
+}
+
+.span {
+  margin: 13px 0 0 13px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--gray);
+}
+
+.tagContainer {
+  bottom: 0;
+  position: absolute;
+  margin: 0 29px 13px 13px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .blogContainer {
+    gap: 27px;
+    padding: 0px 50px 50px 50px;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .blogContainer {
+    gap: 27px;
+    padding: 0px 50px 50px 50px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .blogContainer {
+    padding: 0 36px 45px;
+  }
+}

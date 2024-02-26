@@ -27,6 +27,16 @@ export const pagesBySlugQuery = groq`
   }
 `
 
+export const allPagesQuery = groq`
+  *[_type == "page"] {
+    _id,
+    title,
+    "slug": slug.current,
+    overview,
+    headerImage,
+  }
+`
+
 export const projectBySlugQuery = groq`
   *[_type == "project" && slug.current == $slug][0] {
     _id,
