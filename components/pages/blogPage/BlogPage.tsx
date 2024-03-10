@@ -23,7 +23,7 @@ export function BlogPage({ data }: PageProps) {
 
         {headerImage && (
           <Image
-            className="post__cover"
+            className="mb-3 post__cover"
             src={urlForImage(headerImage).url()}
             height={231}
             width={367}

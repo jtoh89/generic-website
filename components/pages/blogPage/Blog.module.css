@@ -1,15 +1,20 @@
 .blogContainer {
   max-width: var(--max-width-1);
-  margin: var(--standard-margin);
+  margin-top: var(--layout-top-margin);
+}
+
+.blogContainer h1 {
+  font-size: var(--font-header);
+  margin-bottom: var(--margin-2);
 }
 
 .innerContainer {
   /* display: flex;
   justify-content: center; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-  background-color: red;
+  /* background-color: red; */
   /* flex-wrap: wrap; */
   /* align-items: center; */
 }
@@ -23,7 +28,7 @@
 
 /*BLOG CARD*/
 .blogCard {
-  height: 348px;
+  height: 400px;
   /* width: 200px; */
   box-shadow: var(--box-shadow);
   border-radius: 8px;
