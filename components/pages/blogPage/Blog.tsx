@@ -41,14 +41,14 @@ const BlogCard = ({ headerImage, slug, title, subTitle, publishDate }) => {
           />
         </Link>
       </div>
-      <div className={styles.cardFooter}>
+      <div className={styles.cardContent}>
         <h2>
           <Link href={`/blog/${slug}`}>{title}</Link>
         </h2>
-        <p>{publishDate}</p>
+        <p className={styles.date}>{publishDate}</p>
         {/* <span className={styles.span}>{date}</span> */}
         <p>{shortenString(subTitle || '', 100)}</p>
-        <p>
+        <p className={styles.continueRead}>
           <Link href={`/blog/${slug}`}>Continue Reading</Link>
         </p>
       </div>

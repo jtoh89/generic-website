@@ -76,10 +76,12 @@ body {
   --gray-200: #ced2d9;
   --gray-600: #6e7683;
   --blue-600: #1e61cd;
-  --magenta-100: #f9d7eb;
+  --secondary-color: #3eafa4;
 
   --max-width-0: 320px;
   --max-width-1: 968px;
+
+  --font-width-3: 800;
 
   --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
