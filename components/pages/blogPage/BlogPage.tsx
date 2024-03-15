@@ -20,9 +20,9 @@ export async function generateMetadata(
 }
 
 export function BlogPage({ data }: PageProps) {
-  // console.log('JonO BlogPage: ', data)
+  console.log('JonO BlogPage publishDate: ', data?.publishDate)
 
-  const { headerImage, body, subTitle, title } = data ?? {}
+  const { headerImage, body, subTitle, title, publishDate } = data ?? {}
 
   return (
     <section className="page">

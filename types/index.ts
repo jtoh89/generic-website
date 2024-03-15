@@ -38,6 +38,7 @@ export interface HomePagePayload {
 
 export interface BlogPagePayload {
   body?: PortableTextBlock[]
+  publishDate: string
   headerImage?: Image
   metaDescription: string
   name?: string

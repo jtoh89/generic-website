@@ -21,6 +21,7 @@ export const pagesBySlugQuery = groq`
     _id,
     body,
     headerImage,
+    publishDate,
     metaDescription,
     subTitle,
     title,
@@ -33,7 +34,8 @@ export const allPagesQuery = groq`
     _id,
     title,
     "slug": slug.current,
-    overview,
+    publishDate,
+    subTitle,
     headerImage,
   }
 `

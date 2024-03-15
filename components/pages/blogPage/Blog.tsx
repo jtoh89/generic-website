@@ -10,12 +10,12 @@ import React, { useState } from 'react'
 import { CustomPortableText } from '@/components/shared/CustomPortableText'
 import { Header } from '@/components/shared/Header'
 import { urlForImage } from '@/sanity/lib/image'
-import type { BlogPayload } from '@/types'
+import type { BlogPagePayload } from '@/types'
 
 import styles from './Blog.module.css'
 
 export interface Props {
-  data: BlogPayload[] | null
+  data: BlogPagePayload[] | null
 }
 
 function shortenString(str, maxChars) {
@@ -25,11 +25,13 @@ function shortenString(str, maxChars) {
   return str
 }
 
-const BlogCard = ({ headerImage, slug, title, overview }) => {
+const BlogCard = ({ headerImage, slug, title, subTitle, publishDate }) => {
+  console.log('JonO BlogCard publishDate: ', publishDate)
+
   return (
-    <Link href={`/blog/${slug}`}>
-      <div className={styles.blogCard}>
-        <div className={styles.blogCardImageContainer}>
+    <div className={styles.blogCard}>
+      <div className={styles.blogCardImageContainer}>
+        <Link href={`/blog/${slug}`}>
           <Image
             className={styles.blogCardImage}
             src={urlForImage(headerImage)?.url() || ''}
@@ -37,14 +39,20 @@ const BlogCard = ({ headerImage, slug, title, overview }) => {
             fill={true}
             alt=""
           />
-        </div>
-        <div className={styles.cardFooter}>
-          <h2>{title}</h2>
-          {/* <span className={styles.span}>{date}</span> */}
-          <p>{shortenString(toPlainText(overview), 100)}</p>
-        </div>
+        </Link>
       </div>
-    </Link>
+      <div className={styles.cardFooter}>
+        <h2>
+          <Link href={`/blog/${slug}`}>{title}</Link>
+        </h2>
+        <p>{publishDate}</p>
+        {/* <span className={styles.span}>{date}</span> */}
+        <p>{shortenString(subTitle || '', 100)}</p>
+        <p>
+          <Link href={`/blog/${slug}`}>Continue Reading</Link>
+        </p>
+      </div>
+    </div>
   )
 }
 
@@ -71,7 +79,8 @@ export function Blog({ data }: Props) {
             title={blog.title}
             headerImage={blog.headerImage}
             slug={blog.slug}
-            overview={blog.overview}
+            subTitle={blog.subTitle}
+            publishDate={blog.publishDate}
           />
         ))}
       </div>

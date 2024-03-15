@@ -7,6 +7,20 @@ export default defineType({
   title: 'Page',
   icon: DocumentIcon,
   fields: [
+    {
+      name: 'publishDate',
+      title: 'Publish Date',
+      type: 'date',
+      description: 'The date when the content was published.',
+      options: {
+        dateFormat: 'MMMM D, YYYY',
+        calendarTodayLabel: 'Today',
+        inputUtc: false, // Input time in local time zone
+      },
+      validation: (Rule) => Rule.required(),
+      // Set a default value
+      initialValue: () => new Date().toISOString(),
+    },
     defineField({
       name: 'metaDescription',
       description: 'Used both for the <meta> description tag for SEO.',
