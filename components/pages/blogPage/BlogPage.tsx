@@ -14,6 +14,8 @@ export function BlogPage({ data }: PageProps) {
 
   const { headerImage, body, overview, title } = data ?? {}
 
+  console.log('JonO body: ', body)
+
   return (
     <section className="post">
       <div className="post__content">
@@ -30,13 +32,9 @@ export function BlogPage({ data }: PageProps) {
             alt=""
           />
         )}
+
         {/* Body */}
-        {body && (
-          <CustomPortableText
-            // paragraphClasses="font-serif max-w-3xl text-gray-600 text-xl"
-            value={body}
-          />
-        )}
+        {body && <CustomPortableText paragraphClasses="text-xl" value={body} />}
         {/* </div> */}
         {/* <div className="absolute left-0 w-screen border-t" /> */}
       </div>

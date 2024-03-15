@@ -14,7 +14,14 @@ export function CustomPortableText({
 }) {
   const components: PortableTextComponents = {
     block: {
+      h2: ({ children }) => {
+        console.log('JonO h2:', children)
+
+        return <h2 className="post__title">{children}</h2>
+      },
       normal: ({ children }) => {
+        console.log('JonO children:', children)
+
         return <p className={paragraphClasses}>{children}</p>
       },
     },
@@ -38,7 +45,7 @@ export function CustomPortableText({
         value: Image & { alt?: string; caption?: string }
       }) => {
         return (
-          <div className="my-6 space-y-2">
+          <div className="my-3">
             <ImageBox
               image={value}
               alt={value.alt}
