@@ -7,7 +7,7 @@
   flex-direction: row;
   justify-content: space-between;
   color: var(--white);
-  max-width: var(--max-width-1);
+  max-width: var(--max-width);
   margin: auto;
   padding: 50px 0;
 }

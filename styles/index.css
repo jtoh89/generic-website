@@ -93,7 +93,7 @@ body {
   --secondary-color: #3eafa4;
 
   --max-width-0: 320px;
-  --max-width-1: 968px;
+  --max-width: 968px;
 
   --font-weight-3: 800;
 
@@ -106,7 +106,7 @@ body {
 /* Post page */
 .container {
   margin: 0 auto;
-  /* max-width: var(--max-width-1); */
+  /* max-width: var(--max-width); */
   /* padding: 0 var(--space-4); */
 }
 
