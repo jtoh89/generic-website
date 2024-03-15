@@ -155,25 +155,6 @@ body {
   object-fit: cover;
 }
 
-.post__excerpt {
-  font-size: var(--font-size-5);
-  line-height: var(--line-height-5);
-  margin-top: var(--space-3);
-  margin-bottom: var(--space-3);
-}
-
-.post__date {
-  /* font-family: var(--font-family-sans); */
-  /* font-weight: 600; */
-  /* font-family: var(--font-family-sans); */
-  /* font-size: var(--font-size-1); */
-  /* line-height: var(--line-height-1); */
-  /* margin-top: var(--space-4); */
-  font-size: var(--font-size-3);
-  line-height: var(--line-height-2);
-  margin-top: var(--space-0);
-}
-
 /* Layout */
 .container {
   margin: 0 auto;
