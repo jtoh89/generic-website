@@ -13,7 +13,7 @@ export function Header(props: HeaderProps) {
   }
   return (
     <div
-      className={`mb-3 ${
+      className={`page-header ${
         centered
           ? 'text-center'
           : // 'w-5/6 lg:w-3/5'
@@ -23,12 +23,7 @@ export function Header(props: HeaderProps) {
       {/* Title */}
       {title && <h1 className="page-title">{title}</h1>}
       {/* Description */}
-      {description && (
-        <div className="page-subtitle">
-          {/* <CustomPortableText value={description} /> */}
-          {description}
-        </div>
-      )}
+      {description && <div className="page-subtitle">{description}</div>}
     </div>
   )
 }

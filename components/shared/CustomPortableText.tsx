@@ -11,8 +11,6 @@ export function CustomPortableText({ value }: { value: PortableTextBlock[] }) {
   const components: PortableTextComponents = {
     block: {
       h2: ({ children }) => {
-        console.log('JonO h2:', children)
-
         return <h2 className="page-section-header">{children}</h2>
       },
       normal: ({ children }) => {

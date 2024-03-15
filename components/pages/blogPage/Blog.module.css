@@ -44,7 +44,7 @@
 }
 
 .cardContent h2 {
-  font-size: var(--font-size-3);
+  font-size: var(--font-size-S);
   margin-bottom: 8px;
   font-weight: bold;
 }
