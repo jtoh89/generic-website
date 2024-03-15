@@ -1,0 +1,40 @@
+.mainLayout {
+  /* background-image: url(../../assets/images/hero.png); */
+  background-size: 100% 100%;
+  padding: var(--standard-spacing-y) var(--standard-spacing-x);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: var(--max-width);
+  margin: var(--standard-margin);
+}
+
+.p {
+  color: var(--gray);
+  font-size: var(--font-size-xs);
+}
+
+.h1 {
+  font-size: var(--font-size-xl);
+  line-height: var(--font-size-xl-lineheight);
+  margin-bottom: var(--bottom-margin-m);
+}
+
+.imageHolder {
+  max-width: var(--max-width);
+  display: block;
+  margin: auto;
+  padding-bottom: var(--standard-spacing-y);
+}
+
+.imageHolder img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .imageHolder {
+    padding: 0 27px 45px;
+  }
+}

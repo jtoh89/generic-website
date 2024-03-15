@@ -1,5 +1,6 @@
 import type { EncodeDataAttributeCallback } from '@sanity/react-loader'
 import Link from 'next/link'
+import Hero from '@/components/pages/home/Hero'
 
 import { ProjectListItem } from '@/components/pages/home/ProjectListItem'
 import { Header } from '@/components/shared/Header'
@@ -18,7 +19,8 @@ export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
   return (
     <div className="space-y-20">
       {/* Header */}
-      {title && <Header centered title={title} description={overview} />}
+      <Hero content={null} />
+      {/* {title && <Header centered title={title} description={overview} />} */}
       {/* Showcase projects */}
       {showcaseProjects && showcaseProjects.length > 0 && (
         <div className="mx-auto max-w-[100rem] rounded-md border">
