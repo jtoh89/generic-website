@@ -1,24 +1,34 @@
 import Image from 'next/image'
 import React from 'react'
 
+import Button from '@/components/shared/Button/Button'
+import { urlForImage } from '@/sanity/lib/image'
+
 import styles from './Hero.module.css'
 
-const Hero = ({ content }) => {
-  //   const { h1, subheader, image } = content
+const Hero = ({ data }) => {
+  console.log('JonO Hero data: ', data)
   return (
     <>
-      <div className={styles.mainLayout}>
-        <h1 className={styles.h1}>Header H1 tag is here</h1>
-        <p className={styles.p}>Subheader placed over here now subheader</p>
-        {/* <Button text="Get started" /> */}
+      <div className={styles.heroContainer}>
+        <div className={styles.innerContainer}>
+          <div className={styles.textSection}>
+            <h1>{data.title}</h1>
+            <h2>{data.overview}</h2>
+          </div>
+          <div className={styles.imageHolder}>
+            <Image
+              src={urlForImage(data.heroImage).url()}
+              height={231}
+              width={367}
+              alt=""
+            />
+          </div>
+          <div className={styles.button}>
+            <Button text="Get started" />
+          </div>
+        </div>
       </div>
-      {/* <div className={styles.imageHolder}>
-        <Image
-          className={styles.image}
-          src={image.imageSrc}
-          alt={image.imageAltText}
-        />
-      </div> */}
     </>
   )
 }

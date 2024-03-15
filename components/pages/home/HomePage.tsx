@@ -1,11 +1,12 @@
 import type { EncodeDataAttributeCallback } from '@sanity/react-loader'
 import Link from 'next/link'
-import Hero from '@/components/pages/home/Hero'
 
+import Hero from '@/components/pages/home/Hero'
 import { ProjectListItem } from '@/components/pages/home/ProjectListItem'
-import { Header } from '@/components/shared/Header'
 import { resolveHref } from '@/sanity/lib/utils'
 import type { HomePagePayload } from '@/types'
+import TextFeatureVertical from '@/components/shared/TextFeatureVertical/TextFeatureVertical'
+import TextFeatureHorizontal from '@/components/shared/TextFeatureHorizontal/TextFeatureHorizontal'
 
 export interface HomePageProps {
   data: HomePagePayload | null
@@ -17,12 +18,18 @@ export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
   const { overview = [], showcaseProjects = [], title = '' } = data ?? {}
 
   return (
-    <div className="space-y-20">
+    <>
       {/* Header */}
-      <Hero content={null} />
-      {/* {title && <Header centered title={title} description={overview} />} */}
+      <Hero data={data} />
+
+      <TextFeatureVertical content={{ h2: title, text: overview }} />
+      <TextFeatureHorizontal
+        content={{ h2: title, text: overview }}
+        invert={false}
+      />
+
       {/* Showcase projects */}
-      {showcaseProjects && showcaseProjects.length > 0 && (
+      {/* {showcaseProjects && showcaseProjects.length > 0 && (
         <div className="mx-auto max-w-[100rem] rounded-md border">
           {showcaseProjects.map((project, key) => {
             const href = resolveHref(project?._type, project?.slug)
@@ -44,8 +51,8 @@ export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
             )
           })}
         </div>
-      )}
-    </div>
+      )} */}
+    </>
   )
 }
 

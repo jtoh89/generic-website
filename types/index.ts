@@ -33,6 +33,7 @@ export interface HomePagePayload {
   footer?: PortableTextBlock[]
   overview?: PortableTextBlock[]
   showcaseProjects?: ShowcaseProject[]
+  heroImage: Image
   title?: string
 }
 

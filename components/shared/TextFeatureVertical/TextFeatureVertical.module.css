@@ -1,0 +1,32 @@
+.mainLayout {
+  background-color: var(--black);
+  padding: var(--standard-padding-y) var(--standard-padding-x);
+  color: var(--white);
+  width: 100%;
+}
+
+.innerLayout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* max-width: var(--max-width); */
+}
+
+.mainLayout h2 {
+  font-size: var(--font-size-L);
+  line-height: var(--font-size-l-lineheight);
+  margin-bottom: var(--space-L);
+}
+
+.mainLayout p {
+  font-size: var(--font-size-S);
+  /* max-width: 530px; */
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .mainLayout {
+    text-align: center;
+  }
+}
