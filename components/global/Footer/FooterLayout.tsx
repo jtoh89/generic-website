@@ -1,10 +1,10 @@
 import type { PortableTextBlock } from '@portabletext/types'
-
-import { CustomPortableText } from '@/components//shared/CustomPortableText'
 import type { SettingsPayload } from '@/types'
 import Image from 'next/image'
 import styles from './Footer.module.css'
 import Link from 'next/link'
+import Logo from '@/app/logo.png'
+import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa'
 
 interface FooterProps {
   data: SettingsPayload
@@ -17,15 +17,14 @@ export default function Footer(props: FooterProps) {
     <footer>
       <div className={styles.mainLayout}>
         <div className={styles.innerLayout}>
-          <div className={styles.footerLogo}>
-            <div className={styles.logo}>
-              {/* <Image className={styles.video} src={Logo} alt="" /> */}
+          <div className={styles.footerMenu}>
+            <div>
+              <Image className={styles.logo} src={Logo} alt="" />
             </div>
             <div className={styles.social}>
-              {/* <Image src={FaceBook} alt="" />
-              <Image src={Twitter} alt="" />
-              <Image src={LinkedIn} alt="" />
-              <Image src={Youtube} alt="" /> */}
+              <FaFacebook className={styles.socialItem} size={30} />
+              <FaTwitter className={styles.socialItem} size={30} />
+              <FaLinkedin className={styles.socialItem} size={30} />
             </div>
           </div>
           <div className={styles.footerMenu}>
