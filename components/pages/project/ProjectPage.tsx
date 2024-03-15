@@ -5,7 +5,6 @@ import { CustomPortableText } from '@/components/shared/CustomPortableText'
 import { Header } from '@/components/shared/Header'
 import ImageBox from '@/components/shared/ImageBox'
 import type { ProjectPayload } from '@/types'
-
 export interface ProjectPageProps {
   data: ProjectPayload | null
   encodeDataAttribute?: EncodeDataAttributeCallback
@@ -99,12 +98,7 @@ export function ProjectPage({ data, encodeDataAttribute }: ProjectPageProps) {
         </div>
 
         {/* Description */}
-        {description && (
-          <CustomPortableText
-            paragraphClasses="font-serif max-w-3xl text-xl text-gray-600"
-            value={description}
-          />
-        )}
+        {description && <CustomPortableText value={description} />}
       </div>
       <div className="absolute left-0 w-screen border-t" />
     </div>

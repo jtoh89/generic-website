@@ -21,10 +21,10 @@ export function Header(props: HeaderProps) {
       }`}
     >
       {/* Title */}
-      {title && <h1 className="post__title">{title}</h1>}
+      {title && <h1 className="page-title">{title}</h1>}
       {/* Description */}
       {description && (
-        <div className="mt-4 font-serif text-xl text-gray-600 md:text-2xl">
+        <div className="page-subtitle">
           {/* <CustomPortableText value={description} /> */}
           {description}
         </div>

@@ -1,28 +1,22 @@
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import type { PortableTextBlock } from '@portabletext/types'
-import { Image } from 'sanity'
+import Image from 'next/image'
+import { Image as sanityImage } from 'sanity'
 
 import ImageBox from '@/components/shared/ImageBox'
 import { TimelineSection } from '@/components/shared/TimelineSection'
+import { urlForImage } from '@/sanity/lib/image'
 
-export function CustomPortableText({
-  paragraphClasses,
-  value,
-}: {
-  paragraphClasses?: string
-  value: PortableTextBlock[]
-}) {
+export function CustomPortableText({ value }: { value: PortableTextBlock[] }) {
   const components: PortableTextComponents = {
     block: {
       h2: ({ children }) => {
         console.log('JonO h2:', children)
 
-        return <h2 className="post__title">{children}</h2>
+        return <h2 className="page-section-header">{children}</h2>
       },
       normal: ({ children }) => {
-        console.log('JonO children:', children)
-
-        return <p className={paragraphClasses}>{children}</p>
+        return <p className={'page-section-text'}>{children}</p>
       },
     },
     marks: {
@@ -42,14 +36,21 @@ export function CustomPortableText({
       image: ({
         value,
       }: {
-        value: Image & { alt?: string; caption?: string }
+        value: sanityImage & { alt?: string; caption?: string }
       }) => {
         return (
           <div className="my-3">
-            <ImageBox
+            {/* <ImageBox
               image={value}
               alt={value.alt}
               classesWrapper="relative aspect-[16/9]"
+            /> */}
+            <Image
+              className="page-section-image"
+              src={urlForImage(value).url()}
+              height={231}
+              width={367}
+              alt={value.alt || ''}
             />
             {value?.caption && (
               <div className="font-sans text-sm text-gray-600">

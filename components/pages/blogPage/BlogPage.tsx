@@ -14,18 +14,16 @@ export function BlogPage({ data }: PageProps) {
 
   const { headerImage, body, overview, title } = data ?? {}
 
-  console.log('JonO body: ', body)
-
   return (
-    <section className="post">
-      <div className="post__content">
+    <section className="page">
+      <div className="page-content">
         {/* <div className="mb-14"> */}
         {/* Header */}
         <Header title={title} description={overview} />
 
         {headerImage && (
           <Image
-            className="mb-3 post__cover"
+            className="page-header-image"
             src={urlForImage(headerImage).url()}
             height={231}
             width={367}
@@ -34,7 +32,7 @@ export function BlogPage({ data }: PageProps) {
         )}
 
         {/* Body */}
-        {body && <CustomPortableText paragraphClasses="text-xl" value={body} />}
+        {body && <CustomPortableText value={body} />}
         {/* </div> */}
         {/* <div className="absolute left-0 w-screen border-t" /> */}
       </div>

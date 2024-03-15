@@ -31,7 +31,7 @@ export default function ImageBox({
     >
       {imageUrl && (
         <Image
-          className="post__cover"
+          className="page-header-image"
           alt={alt}
           width={width}
           height={height}

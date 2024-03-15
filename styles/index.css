@@ -85,27 +85,37 @@ body {
 }
 
 /* Post page */
-.post {
+.container {
+  max-width: var(--max-width-1);
+  padding: 0 var(--space-4);
+}
+
+.page {
   width: 100%;
   margin: var(--space-1) 0 var(--space-4);
 }
 
-.post__cover {
+.page-header-image {
   width: 100%;
   height: 500px;
   -o-object-fit: cover;
   object-fit: cover;
+  margin-bottom: var(--space-4);
 }
 
-.post .post__cover--none {
-  background: var(--black);
+.page-title {
+  font-size: var(--font-size-9);
+  line-height: var(--line-height-10);
+  margin: var(--space-4) 0;
+  font-weight: 800;
 }
 
-.post__container {
-  padding: 0 var(--space-3);
+.page-subtitle {
+  font-size: var(--font-size-5);
+  line-height: var(--line-height-10);
 }
 
-.post__content {
+.page-content {
   font-family: var(--font-family-serif);
   font-weight: 400;
   font-size: var(--font-size-4);
@@ -114,22 +124,33 @@ body {
   margin-top: var(--space-1);
 }
 
-.post .post__content blockquote {
+.page-content blockquote {
   border-left: 5px solid var(--black);
   padding-left: var(--space-3);
   margin-left: var(--space-4);
 }
 
-.post .post__content a {
+.page-content a {
   color: var(--blue-600);
   text-decoration: none;
 }
 
-.post__title {
-  font-size: var(--font-size-9);
-  line-height: var(--line-height-10);
-  margin: var(--space-4) 0;
+.page-section-header {
+  font-size: var(--font-size-8);
   font-weight: 800;
+  margin-bottom: var(--space-4);
+  line-height: var(--line-height-8);
+}
+
+.page-section-text {
+  font-size: var(--font-size-3);
+}
+
+.page-section-image {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .post__excerpt {
@@ -197,27 +218,18 @@ main {
   gap: 2px;
 }
 
-@media (min-width: 575px) {
-  .container {
-    max-width: var(--max-width-1);
-    padding: 0 var(--space-4);
-  }
-
-  main {
-    margin-top: unset;
-  }
-
-  .header {
+@media (max-width: 800px) {
+  /* .header {
     position: unset;
     border-bottom: none;
     margin: var(--space-3) 0;
     padding: var(--space-2) 0;
     background: unset;
-  }
+  } */
 
-  .header .header__title {
+  /* .header .header__title {
     font-size: var(--font-size-5);
-  }
+  } */
 
   .footer {
     margin: var(--space-3) 0;
