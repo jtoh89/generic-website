@@ -1,6 +1,6 @@
 .mainLayout {
   margin: var(--standard-margin);
-  padding: var(--standard-padding-y) var(--standard-padding-x);
+  padding: var(--standard-padding-xy);
 }
 
 .innerLayout {
@@ -40,7 +40,7 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .mainLayout {
     display: flex;
     flex-direction: column;

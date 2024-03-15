@@ -1,7 +1,8 @@
 .blogContainer {
   margin: 0 auto;
   max-width: var(--max-width);
-  margin-top: var(--layout-top-margin);
+  /* margin-top: var(--layout-top-margin); */
+  padding: var(--container-padding-xy);
 }
 
 .innerContainer {

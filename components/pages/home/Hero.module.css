@@ -40,8 +40,8 @@
   padding-top: var(--space-M);
 }
 
-/* @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .imageHolder {
     padding: 0 27px 45px;
   }
-} */
+}

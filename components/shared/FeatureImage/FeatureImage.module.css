@@ -1,5 +1,5 @@
 .featureImageLayout {
-  padding: var(--standard-padding-y) var(--standard-padding-x);
+  padding: var(--standard-padding-xy);
 }
 
 .innerLayout {
@@ -51,7 +51,7 @@
   align-items: center;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .innerLayout {
     /* grid-template-columns: 1fr; */
     /* gap: 0%; */
