@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import { BlogPage } from '@/components/pages/blogPage/BlogPage'
 import { generateStaticSlugs } from '@/sanity/loader/generateStaticSlugs'
 import { loadPage } from '@/sanity/loader/loadQuery'
+import { pageStructure } from '@/sanity/plugins/settings'
 const PagePreview = dynamic(
   () => import('@/components/pages/blogPage/BlogPagePreview'),
 )
@@ -21,11 +22,17 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { data: page } = await loadPage(params.slug)
 
+  console.log('JonO blog page metaDescription test here', page)
+
+  let descriptionText = ''
+
+  if (page) {
+    descriptionText = page.metaDescription
+  }
+
   return {
     title: page?.title,
-    description: page?.overview
-      ? toPlainText(page.overview)
-      : (await parent).description,
+    description: descriptionText,
   }
 }
 

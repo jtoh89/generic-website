@@ -1,3 +1,4 @@
+import { Metadata, ResolvingMetadata } from 'next'
 import Image from 'next/image'
 
 import { CustomPortableText } from '@/components/shared/CustomPortableText'
@@ -9,17 +10,26 @@ export interface PageProps {
   data: BlogPagePayload | null
 }
 
+export async function generateMetadata(
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  return {
+    title: 'Blog Page',
+    description: 'Blog Page Placeholder',
+  }
+}
+
 export function BlogPage({ data }: PageProps) {
   // console.log('JonO BlogPage: ', data)
 
-  const { headerImage, body, overview, title } = data ?? {}
+  const { headerImage, body, subTitle, title } = data ?? {}
 
   return (
     <section className="page">
       <div className="page-content">
         {/* <div className="mb-14"> */}
         {/* Header */}
-        <Header title={title} description={overview} />
+        <Header title={title} description={subTitle} />
 
         {headerImage && (
           <Image

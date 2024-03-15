@@ -8,16 +8,22 @@ export default defineType({
   icon: DocumentIcon,
   fields: [
     defineField({
+      name: 'metaDescription',
+      description: 'Used both for the <meta> description tag for SEO.',
+      title: 'Meta Description',
+      type: 'text',
+      rows: 4,
+    }),
+    defineField({
       type: 'string',
       name: 'title',
       title: 'Title',
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'overview',
-      description:
-        'Used both for the <meta> description tag for SEO, and the personal website subheader.',
-      title: 'Overview',
+      name: 'subTitle',
+      description: 'Used for sub title.',
+      title: 'Sub Title',
       type: 'text',
       rows: 4,
     }),

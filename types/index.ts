@@ -39,9 +39,10 @@ export interface HomePagePayload {
 export interface BlogPagePayload {
   body?: PortableTextBlock[]
   headerImage?: Image
+  metaDescription: string
   name?: string
-  overview?: PortableTextBlock[]
   title?: string
+  subTitle?: string
   slug?: string
 }
 
