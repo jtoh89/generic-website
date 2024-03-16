@@ -1,0 +1,65 @@
+.faqContainer {
+  margin: auto;
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  padding-bottom: 2rem;
+}
+
+.title h2 {
+  color: #4b3d91; /* Example color value for darkPurple */
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.25; /* Example line-height value */
+}
+
+.line {
+  background-color: #d9d7e0; /* Example color value for lightPurple */
+  margin-top: 1.25rem; /* Example margin-top value for my-5 */
+  margin-bottom: 1.25rem; /* Example margin-bottom value for my-5 */
+  height: 1px; /* Example height value for h-[1px] */
+  width: 100%; /* Full width */
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+    padding: 2.5rem;
+  }
+
+  .title h2 {
+    font-size: 56px;
+    line-height: 1.1;
+  }
+}
+
+/* FAQ Item */
+
+.faqItem {
+  width: 100%;
+  text-align: left;
+}
+
+.faqItemHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faqItemHeader h4 {
+  font-size: var(--font-size-S);
+  font-weight: 800;
+}
+
+.faqItemText {
+  margin-top: var(--space-M);
+  font-size: var(--font-size-S);
+}

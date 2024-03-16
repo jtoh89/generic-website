@@ -84,6 +84,8 @@ body {
   --line-height-12: 128px;
 
   --border-radius-S: 5px;
+  --border-radius-M: 15px;
+
   --white: #fff;
   --black: #101112;
   --gray-200: #ced2d9;
@@ -91,7 +93,7 @@ body {
   --blue-600: #1e61cd;
   --primary-color: #1e61cd;
   --secondary-color: #3eafa4;
-
+  --tertiary-color: #fff1f9;
   --max-width-0: 320px;
   --max-width: 968px;
 
