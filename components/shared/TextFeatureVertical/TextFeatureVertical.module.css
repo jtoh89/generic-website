@@ -1,6 +1,6 @@
 .mainLayout {
   background-color: var(--black);
-  padding: var(--standard-padding-xy);
+  padding: var(--standard-padding-yx);
   color: var(--white);
   width: 100%;
 }

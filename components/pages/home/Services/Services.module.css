@@ -1,7 +1,7 @@
 .container {
   margin: auto;
   text-align: center;
-  padding: var(--standard-padding-xy);
+  padding: var(--standard-padding-yx);
 }
 
 .container h2 {

@@ -1,6 +1,6 @@
 .container {
   background-color: #ebf4f7;
-  padding: var(--standard-padding-xy);
+  padding: var(--standard-padding-yx);
 }
 
 .innerContainer {
