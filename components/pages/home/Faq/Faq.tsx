@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import styles from './Faq.module.css'
+import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io'
 
 const Data = [
   {
@@ -75,7 +76,7 @@ const FaqItem = ({
     <article className={styles.faqItem}>
       <div onClick={onClick} className={styles.faqItemHeader}>
         <h4>{title}</h4>
-        {open ? 'Close' : 'Open'}
+        {open ? <IoIosArrowUp size={30} /> : <IoIosArrowDown size={30} />}
       </div>
       {open && <p className={styles.faqItemText}>{children}</p>}
     </article>
