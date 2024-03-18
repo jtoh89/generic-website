@@ -1,5 +1,6 @@
 .heroContainer {
   padding-bottom: var(--space-XXL);
+  width: 100%;
 }
 
 .innerContainer {

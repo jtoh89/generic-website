@@ -7,6 +7,7 @@ import { client } from '@/sanity/lib/client'
 import {
   allPagesQuery,
   homePageQuery,
+  aboutPageQuery,
   pagesBySlugQuery,
   projectBySlugQuery,
   settingsQuery,
@@ -16,6 +17,7 @@ import {
   BlogPagePayload,
   BlogPayload,
   HomePagePayload,
+  AboutPagePayload,
   ProjectPayload,
   SettingsPayload,
 } from '@/types'
@@ -79,6 +81,14 @@ export function loadHomePage() {
     homePageQuery,
     {},
     { next: { tags: ['home', 'project'] } },
+  )
+}
+
+export function loadAboutPage() {
+  return loadQuery<AboutPagePayload | null>(
+    aboutPageQuery,
+    {},
+    { next: { tags: ['about'] } },
   )
 }
 

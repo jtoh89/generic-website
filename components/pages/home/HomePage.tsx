@@ -9,9 +9,9 @@ import TextFeatureVertical from '@/components/shared/TextFeatureVertical/TextFea
 import { resolveHref } from '@/sanity/lib/utils'
 import type { HomePagePayload } from '@/types'
 
+import Faq from './Faq/Faq'
 import Services from './Services/Services'
 import WhyUs from './WhyUs/WhyUs'
-import Faq from './Faq/Faq'
 
 export interface HomePageProps {
   data: HomePagePayload | null

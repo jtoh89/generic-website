@@ -75,3 +75,11 @@ export interface SettingsPayload {
   menuItems?: MenuItem[]
   ogImage?: Image
 }
+
+export interface AboutPagePayload {
+  footer?: PortableTextBlock[]
+  overview?: PortableTextBlock[]
+  showcaseProjects?: ShowcaseProject[]
+  heroImage: Image
+  title?: string
+}

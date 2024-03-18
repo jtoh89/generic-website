@@ -94,7 +94,6 @@ body {
   --primary-color: #1e61cd;
   --secondary-color: #3eafa4;
   --tertiary-color: #fff1f9;
-  --max-width-0: 320px;
   --max-width: 968px;
 
   --font-weight-3: 800;
@@ -110,8 +109,8 @@ body {
   --layout-bottom-margin: 30px;
 }
 
-.container {
-  margin: 0 auto;
+.layout-container {
+  /* margin: 0 auto; */
   padding-top: 50px;
   padding-bottom: 100px;
 }
