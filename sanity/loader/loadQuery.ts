@@ -5,19 +5,19 @@ import { draftMode } from 'next/headers'
 
 import { client } from '@/sanity/lib/client'
 import {
+  aboutPageQuery,
   allPagesQuery,
   homePageQuery,
-  aboutPageQuery,
   pagesBySlugQuery,
   projectBySlugQuery,
   settingsQuery,
 } from '@/sanity/lib/queries'
 import { token } from '@/sanity/lib/token'
 import {
+  AboutPagePayload,
   BlogPagePayload,
   BlogPayload,
   HomePagePayload,
-  AboutPagePayload,
   ProjectPayload,
   SettingsPayload,
 } from '@/types'

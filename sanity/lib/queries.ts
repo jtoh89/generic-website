@@ -17,7 +17,7 @@ export const homePageQuery = groq`
   }
 `
 export const aboutPageQuery = groq`
-  *[_type == "home"][0]{
+  *[_type == "about"][0]{
     _id,
     heroImage,
     overview,

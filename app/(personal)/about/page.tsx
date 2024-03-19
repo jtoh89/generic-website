@@ -3,8 +3,6 @@ import { draftMode } from 'next/headers'
 import Link from 'next/link'
 
 import { AboutPage } from '@/components/pages/about/AboutPage'
-import { HomePage } from '@/components/pages/home/HomePage'
-import { studioUrl } from '@/sanity/lib/api'
 import { loadAboutPage } from '@/sanity/loader/loadQuery'
 
 const AboutPagePreview = dynamic(
@@ -16,7 +14,7 @@ export default async function IndexRoute() {
   if (!initial.data) {
     return (
       <div className="text-center">
-        <AboutPage data={null} />
+        <AboutPage data={initial} />
       </div>
     )
   }
