@@ -10,6 +10,7 @@
 
 .container h3 {
   font-size: var(--font-size-XL);
+  font-weight: 500;
 }
 
 .cardContainer {

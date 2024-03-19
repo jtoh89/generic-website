@@ -37,7 +37,7 @@
 }
 
 .menu a:hover {
-  color: var(--themeColor);
+  color: var(--secondary-color);
 }
 
 .contact {
@@ -93,7 +93,7 @@
   }
 
   .navClose:hover {
-    color: var(--themeColor);
+    color: var(--secondary-color);
   }
 
   .mobileNav {

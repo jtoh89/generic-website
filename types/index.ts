@@ -81,5 +81,5 @@ export interface AboutPagePayload {
   overview?: PortableTextBlock[]
   showcaseProjects?: ShowcaseProject[]
   heroImage: Image
-  title?: string
+  title: string
 }

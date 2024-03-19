@@ -19,11 +19,15 @@ export default async function IndexRoute() {
 
   if (!initial.data) {
     return (
-      <div className="text-center">
+      <div className="layout-container">
         <HomePage data={null} />
       </div>
     )
   }
 
-  return <HomePage data={initial.data} />
+  return (
+    <div className="layout-container">
+      <HomePage data={initial.data} />
+    </div>
+  )
 }

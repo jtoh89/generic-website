@@ -11,7 +11,7 @@ import type { AboutPagePayload } from '@/types'
 import SharedHero from '../../shared/Hero/SharedHero'
 
 export interface AboutPageProps {
-  data: AboutPagePayload | NumCalculator
+  data: AboutPagePayload
 }
 
 export function AboutPage({ data }: AboutPageProps) {
@@ -20,7 +20,7 @@ export function AboutPage({ data }: AboutPageProps) {
 
   return (
     <>
-      <SharedHero data={data} />
+      <SharedHero title={data.title} image={data.heroImage} />
       <h1>About Page</h1>
       {/* <FeatureImage
         invert={false}

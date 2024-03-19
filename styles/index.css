@@ -212,6 +212,7 @@ main {
     --line-height-L: 38px;
     --line-height-XL: 46px;
 
-    --container-padding-yx: 50px 20px;
+    --container-padding-yx: 50px 10px;
+    --standard-padding-yx: 80px 30px;
   }
 }

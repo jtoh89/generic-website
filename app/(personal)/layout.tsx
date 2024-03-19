@@ -44,10 +44,6 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export const viewport: Viewport = {
-  themeColor: '#000',
-}
-
 export default async function IndexRoute({
   children,
 }: {
@@ -59,7 +55,7 @@ export default async function IndexRoute({
         <Suspense>
           <Navbar />
         </Suspense>
-        <div className="layout-container">
+        <div>
           <Suspense>{children}</Suspense>
         </div>
         <Suspense>
