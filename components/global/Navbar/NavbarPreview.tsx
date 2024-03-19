@@ -1,5 +1,3 @@
-'use client'
-
 import { useSettings } from '@/sanity/loader/useQuery'
 
 import NavbarLayout from './NavbarLayout'

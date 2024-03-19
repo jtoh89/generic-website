@@ -54,7 +54,7 @@
 
 .contact:hover {
   color: var(--white);
-  background: var(--themeColor);
+  background: var(--secondary-color);
 }
 
 .mobile {
