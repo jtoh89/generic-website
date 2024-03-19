@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import React from 'react'
+import Image from 'next/image'
 
 import { urlForImage } from '@/sanity/lib/image'
 
@@ -9,16 +9,22 @@ const SharedHero = ({ data }) => {
   return (
     <div className={`${styles.mainLayout}`}>
       <div className={styles.innerLayout}>
-        <h2>Title written here</h2>
-      </div>
+        <div className={styles.leftContainer}>
+          <h2>
+            <span>{data.title}</span>
+          </h2>
+        </div>
 
-      <Image
-        className="page-header-image"
-        src={urlForImage(data.heroImage).url()}
-        height={231}
-        width={367}
-        alt=""
-      />
+        <div className={styles.rightContainer}>
+          <Image
+            className={styles.image}
+            src={urlForImage(data.heroImage).url()}
+            fill
+            style={{ objectFit: 'cover' }}
+            alt=""
+          />
+        </div>
+      </div>
     </div>
   )
 }
