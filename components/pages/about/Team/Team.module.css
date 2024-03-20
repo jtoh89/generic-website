@@ -1,0 +1,43 @@
+.mainLayout {
+  margin: var(--standard-margin);
+  padding: var(--standard-padding-yx);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 400px;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.imageContainer {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  margin: 0 auto;
+}
+
+.image {
+}
+
+@media only screen and (max-width: 1024px) {
+  .mainLayout {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mainLayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .innerLayout {
+    flex-direction: column;
+  }
+}

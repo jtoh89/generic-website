@@ -10,9 +10,9 @@ const SharedHero = ({ title, image }) => {
     <div className={`${styles.mainLayout}`}>
       <div className={styles.innerLayout}>
         <div className={styles.leftContainer}>
-          <h2>
+          <h1>
             <span>{title}</span>
-          </h2>
+          </h1>
         </div>
 
         <div className={styles.rightContainer}>
@@ -21,7 +21,7 @@ const SharedHero = ({ title, image }) => {
             src={urlForImage(image).url()}
             fill
             style={{ objectFit: 'cover' }}
-            alt=""
+            alt={image.alt}
           />
         </div>
       </div>

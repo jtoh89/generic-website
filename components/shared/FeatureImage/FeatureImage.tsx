@@ -12,7 +12,7 @@ const FeatureImage = ({ invert, content }) => {
       <div className={styles.innerLayout}>
         <div className={styles.leftLayout}>
           <div className={styles.leftInnerLayout}>
-            <h4>{smallHeader}</h4>
+            {smallHeader && <h4>{smallHeader}</h4>}
             <h2>{h2}</h2>
             <p>{text}</p>
           </div>
