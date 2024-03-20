@@ -6,22 +6,31 @@
 .card {
   display: grid;
   grid-template-columns: 1fr;
-  height: 400px;
   max-width: 300px;
   margin: 0 auto;
   text-align: center;
+  background-color: red;
+  padding: var(--space-S);
 }
 
 .imageContainer {
   height: 150px;
   width: 150px;
-  border-radius: 50%;
-  box-shadow: var(--box-shadow);
   position: relative;
   margin: 0 auto;
 }
 
 .image {
+  border-radius: 50%;
+}
+
+.card h3 {
+  margin-top: var(--space-S);
+  font-weight: 700;
+}
+
+.card p {
+  margin-top: var(--space-S);
 }
 
 @media only screen and (max-width: 1024px) {

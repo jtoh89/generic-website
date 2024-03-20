@@ -80,9 +80,8 @@ export interface SettingsPayload {
 export interface AboutPagePayload {
   metaTitle: string
   metaDescription: string
+  title: string
   footer?: PortableTextBlock[]
   overview?: PortableTextBlock[]
-  showcaseProjects?: ShowcaseProject[]
   heroImage: Image
-  title: string
 }
