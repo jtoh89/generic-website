@@ -20,7 +20,7 @@ const Hero = ({ data }) => {
             src={urlForImage(data.heroImage).url()}
             height={231}
             width={367}
-            alt=""
+            alt={data.heroImage.alt}
           />
         </div>
         <div className={styles.button}>

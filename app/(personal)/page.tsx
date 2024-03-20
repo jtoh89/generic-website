@@ -1,3 +1,4 @@
+import { Metadata, ResolvingMetadata } from 'next'
 import dynamic from 'next/dynamic'
 import { draftMode } from 'next/headers'
 import Link from 'next/link'
@@ -10,6 +11,16 @@ const HomePagePreview = dynamic(
   () => import('@/components/pages/home/HomePagePreview'),
 )
 
+export async function generateMetadata(): Promise<Metadata> {
+  const { data: homePage } = await loadHomePage()
+  console.log('JonO Metadata homePage: ', homePage)
+
+  return {
+    title: homePage?.metaTitle,
+    description: homePage?.metaDescription,
+  }
+}
+
 export default async function IndexRoute() {
   const initial = await loadHomePage()
 
@@ -17,13 +28,13 @@ export default async function IndexRoute() {
     return <HomePagePreview initial={initial} />
   }
 
-  if (!initial.data) {
-    return (
-      <div className="layout-container">
-        <HomePage data={null} />
-      </div>
-    )
-  }
+  // if (!initial.data) {
+  //   return (
+  //     <div className="layout-container">
+  //       <HomePage data={null} />
+  //     </div>
+  //   )
+  // }
 
   return (
     <div className="layout-container">
