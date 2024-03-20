@@ -3,7 +3,6 @@ import '@/styles/index.css'
 import { toPlainText } from '@portabletext/react'
 import { Metadata, Viewport } from 'next'
 import dynamic from 'next/dynamic'
-import { Montserrat } from 'next/font/google'
 import { draftMode } from 'next/headers'
 import { Suspense } from 'react'
 
@@ -15,11 +14,6 @@ import { loadHomePage, loadSettings } from '@/sanity/loader/loadQuery'
 const LiveVisualEditing = dynamic(
   () => import('@/sanity/loader/LiveVisualEditing'),
 )
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 export async function generateMetadata(): Promise<Metadata> {
   const [{ data: settings }, { data: homePage }] = await Promise.all([
@@ -51,17 +45,15 @@ export default async function IndexRoute({
 }) {
   return (
     <>
-      <html lang="en" className={montserrat.className}>
-        <Suspense>
-          <Navbar />
-        </Suspense>
-        <div>
-          <Suspense>{children}</Suspense>
-        </div>
-        <Suspense>
-          <Footer />
-        </Suspense>
-      </html>
+      <Suspense>
+        <Navbar />
+      </Suspense>
+      <div>
+        <Suspense>{children}</Suspense>
+      </div>
+      <Suspense>
+        <Footer />
+      </Suspense>
       {draftMode().isEnabled && <LiveVisualEditing />}
     </>
   )

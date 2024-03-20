@@ -1,6 +1,6 @@
 import 'tailwindcss/tailwind.css'
 
-import { IBM_Plex_Mono, Inter, PT_Serif } from 'next/font/google'
+import { IBM_Plex_Mono, Inter, PT_Serif, Montserrat } from 'next/font/google'
 
 const serif = PT_Serif({
   variable: '--font-serif',
@@ -20,6 +20,11 @@ const mono = IBM_Plex_Mono({
   weight: ['500', '700'],
 })
 
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 export default async function RootLayout({
   children,
 }: {
@@ -28,7 +33,7 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${mono.variable} ${sans.variable} ${serif.variable}`}
+      className={`${montserrat.className} ${mono.variable} ${sans.variable} ${serif.variable}`}
     >
       <body>{children}</body>
     </html>
