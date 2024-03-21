@@ -14,7 +14,7 @@ export default async function IndexRoute() {
   if (!initial.data) {
     return (
       <div className="text-center">
-        <AboutPage data={initial} />
+        <AboutPage data={initial.data} />
       </div>
     )
   }

@@ -16,6 +16,8 @@ export const aboutPageQuery = groq`
     metaTitle,
     metaDescription,
     heroImage,
+    mission,
+    team,
     overview,
     title,
   }

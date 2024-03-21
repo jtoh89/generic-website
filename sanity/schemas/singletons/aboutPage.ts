@@ -1,11 +1,9 @@
-import { HomeIcon } from '@sanity/icons'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'about',
   title: 'About',
   type: 'document',
-  icon: HomeIcon,
   // Uncomment below to have edits publish automatically as you type
   // liveEdit: true,
   fields: [
@@ -30,34 +28,91 @@ export default defineType({
       options: {
         hotspot: true,
       },
-      preview: {
-        select: {
-          imageUrl: 'asset.url',
-          title: 'caption',
-        },
-      },
       fields: [
-        defineField({
-          title: 'Caption',
-          name: 'caption',
-          type: 'string',
-        }),
         defineField({
           name: 'alt',
           type: 'string',
           title: 'Alt text',
-          description:
-            'Alternative text for screenreaders. Falls back on caption if not set',
+          description: 'Alt text',
         }),
       ],
     }),
     defineField({
-      name: 'overview',
-      description:
-        'Used both for the <meta> description tag for SEO, and the personal website subheader.',
-      title: 'Description',
-      type: 'text',
-      validation: (rule) => rule.max(155).required(),
+      name: 'mission',
+      type: 'object',
+      title: 'Mission',
+      fields: [
+        defineField({
+          name: 'header',
+          title: 'Header',
+          type: 'string',
+        }),
+        defineField({
+          name: 'subheader',
+          title: 'SubHeader',
+          type: 'string',
+        }),
+        defineField({
+          name: 'image',
+          title: 'Mission Image',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            defineField({
+              name: 'altText',
+              type: 'string',
+              title: 'Mission Alt Text',
+              description: 'Alt text',
+            }),
+          ],
+        }),
+      ],
+    }),
+    defineField({
+      name: 'team',
+      title: 'Team Members',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          name: 'myObject',
+          title: 'My Object',
+          fields: [
+            {
+              name: 'image',
+              title: 'Image',
+              type: 'image',
+              options: {
+                hotspot: true, // If you want to allow hotspot for images
+              },
+            },
+            {
+              name: 'altText',
+              title: 'Alt Text',
+              type: 'string',
+              description: 'Alternative text for the image',
+            },
+            {
+              name: 'fullName',
+              title: 'Full Name',
+              type: 'string',
+            },
+            {
+              name: 'title',
+              title: 'Title',
+              type: 'string',
+            },
+            {
+              name: 'description',
+              title: 'Description',
+              type: 'text',
+              rows: 3, // Adjust based on how much text you expect
+            },
+          ],
+        },
+      ],
     }),
   ],
   preview: {

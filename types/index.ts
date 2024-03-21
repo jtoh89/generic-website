@@ -38,6 +38,17 @@ export interface HomePagePayload {
   footer?: PortableTextBlock[]
 }
 
+export interface AboutPagePayload {
+  metaTitle: string
+  metaDescription: string
+  title: string
+  footer?: PortableTextBlock[]
+  overview?: PortableTextBlock[]
+  heroImage: Image
+  team: any
+  mission: any[]
+}
+
 export interface BlogPagePayload {
   body?: PortableTextBlock[]
   publishDate: string
@@ -75,13 +86,4 @@ export interface SettingsPayload {
   footer?: PortableTextBlock[]
   menuItems?: MenuItem[]
   ogImage?: Image
-}
-
-export interface AboutPagePayload {
-  metaTitle: string
-  metaDescription: string
-  title: string
-  footer?: PortableTextBlock[]
-  overview?: PortableTextBlock[]
-  heroImage: Image
 }
