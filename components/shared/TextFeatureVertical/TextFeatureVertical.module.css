@@ -21,8 +21,13 @@
 
 .mainLayout p {
   font-size: var(--font-size-S);
-  /* max-width: 530px; */
+  margin-bottom: var(--space-M);
   text-align: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 768px) {

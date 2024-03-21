@@ -3,11 +3,21 @@
   padding: var(--standard-padding-yx);
 }
 
-.card {
+.mainLayout h2 {
+  text-align: center;
+  font-size: var(--font-size-L);
+  margin-bottom: var(--space-L);
+}
+
+.cardContainer {
   display: grid;
-  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.card {
+  /* display: grid; */
+  /* grid-template-columns: 1fr; */
   max-width: 300px;
-  margin: 0 auto;
   text-align: center;
   background-color: red;
   padding: var(--space-S);
