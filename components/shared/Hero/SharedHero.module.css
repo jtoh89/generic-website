@@ -1,6 +1,6 @@
 .mainLayout {
   background-color: #ffedf9;
-  padding: 0 50px;
+  padding: 0 var(--space-XXL);
 }
 
 .innerLayout {
@@ -13,6 +13,7 @@
 .leftContainer {
   justify-self: start;
   align-items: center;
+  padding-right: 30px;
 }
 
 .leftContainer span {
@@ -21,7 +22,7 @@
   height: 300px;
 }
 
-.leftContainer h2 {
+.leftContainer h1 {
   font-size: var(--font-size-XL);
   font-weight: 800;
 }
@@ -49,8 +50,9 @@
     margin: 0 auto;
   }
 
-  .leftContainer h2 {
+  .leftContainer h1 {
     margin-bottom: var(--space-L);
+    text-align: center;
   }
 
   .leftContainer span {

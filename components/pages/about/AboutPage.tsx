@@ -1,9 +1,5 @@
-import NumCalculator from 'antd/es/theme/util/calc/NumCalculator'
-import Link from 'next/link'
-
 import FeatureImage from '@/components/shared/FeatureImage/FeatureImage'
 import TextFeatureVertical from '@/components/shared/TextFeatureVertical/TextFeatureVertical'
-import { resolveHref } from '@/sanity/lib/utils'
 import type { AboutPagePayload } from '@/types'
 
 import SharedHero from '../../shared/Hero/SharedHero'

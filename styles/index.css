@@ -202,6 +202,12 @@ main {
 
 @media (max-width: 800px) {
   * {
+    --space-S: 8px;
+    --space-M: 18px;
+    --space-L: 25px;
+    --space-XL: 25px;
+    --space-XXL: 40px;
+
     --font-size-S: 16px;
     --font-size-M: 25px;
     --font-size-L: 28px;
