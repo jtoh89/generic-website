@@ -5,6 +5,8 @@ import {
   BsFillPinMapFill,
 } from 'react-icons/bs'
 
+import SelectIcon from '@/components/shared/IconSelector'
+
 import styles from './Services.module.css'
 
 const Services = ({ data }) => {
@@ -17,22 +19,11 @@ const Services = ({ data }) => {
       <div className={styles.cardContainer}>
         <div className={styles.innerContainer}>
           {data.map((item, i) => {
-            let icon
-
-            switch (item.icon) {
-              case 'BsClock':
-                icon = <BsClock className={styles.icon} size={80} />
-                break
-              case 'BsFastForward':
-                icon = <BsFastForward className={styles.icon} size={80} />
-                break
-              case 'BsFastForwardCircle':
-                icon = <BsFastForwardCircle className={styles.icon} size={80} />
-                break
-              case 'BsFillPinMapFill':
-                icon = <BsFillPinMapFill className={styles.icon} size={80} />
-                break
-            }
+            const icon = SelectIcon({
+              icon: item.icon,
+              size: 80,
+              className: styles.icon,
+            })
 
             return (
               <div key={i} className={styles.itemContainer}>

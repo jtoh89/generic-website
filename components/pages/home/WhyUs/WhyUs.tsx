@@ -2,6 +2,8 @@ import React from 'react'
 import { BsHandThumbsUp } from 'react-icons/bs'
 import { BsPeople, BsTools } from 'react-icons/bs'
 
+import SelectIcon from '@/components/shared/IconSelector'
+
 import styles from './WhyUs.module.css'
 
 const WhyUs = ({ data }) => {
@@ -20,9 +22,10 @@ const WhyUs = ({ data }) => {
                 className={`${styles.item} ${i === data.content.length && styles.noMarginBottom}`}
               >
                 <div className={styles.icon}>
-                  {(i === 0 && <BsHandThumbsUp size={50} />) ||
-                    (i === 1 && <BsTools size={50} />) ||
-                    (i === 2 && <BsPeople size={50} />)}
+                  {(i === 0 &&
+                    SelectIcon({ icon: 'BsHandThumbsUp', size: 50 })) ||
+                    (i === 1 && SelectIcon({ icon: 'BsTools', size: 50 })) ||
+                    (i === 2 && SelectIcon({ icon: 'BsPeople', size: 50 }))}
                 </div>
                 <div>
                   <h3>{category.contentHeader}</h3>
