@@ -21,7 +21,6 @@ export interface HomePageProps {
 export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
   // Default to an empty object to allow previews on non-existent documents
   const { overview = [], title = '', heroImage } = data ?? {}
-  console.log('JonO HomePage data: ', data)
 
   return (
     <>
@@ -42,7 +41,7 @@ export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
           image: heroImage,
         }}
       />
-      <Faq />
+      <Faq data={data?.faq} />
       {/* Showcase projects */}
       {/* {showcaseProjects && showcaseProjects.length > 0 && (
         <div className="mx-auto max-w-[100rem] rounded-md border">

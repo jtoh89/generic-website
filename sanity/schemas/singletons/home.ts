@@ -142,6 +142,31 @@ export default defineType({
       ],
     }),
     defineField({
+      title: 'FAQ SECTION',
+      name: 'faq',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          name: 'faqItem',
+          title: 'Question/Answer',
+          fields: [
+            {
+              name: 'question',
+              title: 'Question',
+              type: 'string',
+            },
+            {
+              name: 'answer',
+              title: 'Answer',
+              type: 'text',
+              rows: 3,
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
       name: 'title',
       description: 'This field is the title of your personal website.',
       title: 'Title',

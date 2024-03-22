@@ -7,6 +7,7 @@ export const homePageQuery = groq`
     hero,
     services,
     companyHighlights,
+    faq,
     title,
     heroImage,
     overview,

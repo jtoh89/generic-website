@@ -36,6 +36,7 @@ export interface HomePagePayload {
   companyHighlights: any[]
   title?: string
   heroImage: Image
+  faq: any[]
   overview?: PortableTextBlock[]
   footer?: PortableTextBlock[]
 }
