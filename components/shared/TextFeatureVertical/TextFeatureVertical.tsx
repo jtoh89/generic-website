@@ -1,8 +1,14 @@
 import React from 'react'
-import styles from './TextFeatureVertical.module.css'
-import Button from '../Button/Button'
 
-const TextFeatureVertical = ({ content }) => {
+import Button from '../Button/Button'
+import styles from './TextFeatureVertical.module.css'
+
+type Props = {
+  content: any
+  ctaButtonText?: string
+}
+
+const TextFeatureVertical = ({ content, ctaButtonText }) => {
   const { h2, text } = content
 
   return (
@@ -11,9 +17,11 @@ const TextFeatureVertical = ({ content }) => {
         <h2>{h2}</h2>
         <p>{text}</p>
       </div>
-      <div className={styles.button}>
-        <Button text="Get started" />
-      </div>
+      {ctaButtonText && (
+        <div className={styles.button}>
+          <Button text={ctaButtonText} />
+        </div>
+      )}
     </div>
   )
 }

@@ -9,6 +9,7 @@ import React, { useState } from 'react'
 
 import { CustomPortableText } from '@/components/shared/CustomPortableText'
 import { Header } from '@/components/shared/Header'
+import SharedHero from '@/components/shared/Hero/SharedHero'
 import { urlForImage } from '@/sanity/lib/image'
 import type { BlogPagePayload } from '@/types'
 
@@ -23,6 +24,49 @@ function shortenString(str, maxChars) {
     return str.substring(0, maxChars) + '...'
   }
   return str
+}
+
+export function Blog({ data }: Props) {
+  const itemsPerPage = 6
+  const totalItems = data?.length || 0
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const startIndex = (currentPage - 1) * itemsPerPage
+  const endIndex = Math.min(startIndex + itemsPerPage, totalItems)
+
+  const itemsToDisplay = data?.slice(startIndex, endIndex)
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page)
+  }
+  return (
+    <div className={styles.blogContainer}>
+      <Header title={'Blog Page'} description={['Test descrtiption here']} />
+      {/* <SharedHero title={'Test descrtiption here'} image={} /> */}
+      <div className={styles.innerContainer}>
+        {itemsToDisplay?.map((blog, i) => (
+          <BlogCard
+            key={i}
+            title={blog.title}
+            headerImage={blog.headerImage}
+            slug={blog.slug}
+            subTitle={blog.subTitle}
+            publishDate={blog.publishDate}
+          />
+        ))}
+      </div>
+      <div className={styles.paginatin}>
+        <Pagination
+          current={currentPage}
+          onChange={handlePageChange}
+          total={totalItems}
+          pageSize={itemsPerPage}
+          responsive={true}
+          showSizeChanger={false}
+        />
+      </div>
+    </div>
+  )
 }
 
 const BlogCard = ({ headerImage, slug, title, subTitle, publishDate }) => {
@@ -55,47 +99,4 @@ const BlogCard = ({ headerImage, slug, title, subTitle, publishDate }) => {
     </div>
   )
 }
-
-export function Blog({ data }: Props) {
-  const itemsPerPage = 6
-  const totalItems = data?.length || 0
-  const [currentPage, setCurrentPage] = useState(1)
-
-  const startIndex = (currentPage - 1) * itemsPerPage
-  const endIndex = Math.min(startIndex + itemsPerPage, totalItems)
-
-  const itemsToDisplay = data?.slice(startIndex, endIndex)
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page)
-  }
-  return (
-    <div className={styles.blogContainer}>
-      <Header title={'Blog Page'} description={['Test descrtiption here']} />
-      <div className={styles.innerContainer}>
-        {itemsToDisplay?.map((blog, i) => (
-          <BlogCard
-            key={i}
-            title={blog.title}
-            headerImage={blog.headerImage}
-            slug={blog.slug}
-            subTitle={blog.subTitle}
-            publishDate={blog.publishDate}
-          />
-        ))}
-      </div>
-      <div className={styles.paginatin}>
-        <Pagination
-          current={currentPage}
-          onChange={handlePageChange}
-          total={totalItems}
-          pageSize={itemsPerPage}
-          responsive={true}
-          showSizeChanger={false}
-        />
-      </div>
-    </div>
-  )
-}
-
 export default Blog

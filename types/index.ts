@@ -36,6 +36,7 @@ export interface HomePagePayload {
   companyHighlights: any[]
   contentPiece: any
   featureImage: any
+  ctaSection: any
   title?: string
   heroImage: Image
   faq: any[]

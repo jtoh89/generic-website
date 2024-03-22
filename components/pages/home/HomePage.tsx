@@ -22,14 +22,20 @@ export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
   // Default to an empty object to allow previews on non-existent documents
   const { overview = [], title = '', heroImage } = data ?? {}
 
-  console.log('JonO HomePage data: ', data)
+  console.log('JonO HomePage data: ', data?.ctaSection)
 
   return (
     <>
       <Hero data={data?.hero} />
       <Services data={data?.services} />
       <WhyUs data={data?.companyHighlights} />
-      <TextFeatureVertical content={{ h2: title, text: overview }} />
+      <TextFeatureVertical
+        content={{
+          h2: data?.ctaSection.header,
+          text: data?.ctaSection.description,
+        }}
+        ctaButtonText={'Get Started'}
+      />
       <TextFeatureHorizontal
         content={{
           h2: data?.contentPiece.header,

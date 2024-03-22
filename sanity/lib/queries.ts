@@ -9,6 +9,7 @@ export const homePageQuery = groq`
     companyHighlights,
     contentPiece,
     featureImage,
+    ctaSection,
     faq,
     title,
     heroImage,

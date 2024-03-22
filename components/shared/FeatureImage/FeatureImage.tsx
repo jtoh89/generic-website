@@ -1,14 +1,14 @@
-import React from 'react'
 import Image from 'next/image'
-import styles from './FeatureImage.module.css'
+import React from 'react'
+
 import { urlForImage } from '@/sanity/lib/image'
+
+import styles from './FeatureImage.module.css'
 
 const FeatureImage = ({ invert, content }) => {
   const { text, h2, smallHeader, image } = content
   return (
-    <div
-      className={`${styles.featureImageLayout} ${invert ? styles.white : styles.black}`}
-    >
+    <div className={`${invert ? styles.white : styles.black}`}>
       <div className={styles.innerLayout}>
         <div className={styles.leftLayout}>
           <div className={styles.leftInnerLayout}>

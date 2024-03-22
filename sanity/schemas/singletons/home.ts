@@ -142,6 +142,23 @@ export default defineType({
       ],
     }),
     defineField({
+      title: 'CTA SECTION',
+      name: 'ctaSection',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'header',
+          title: 'Header',
+          type: 'string',
+        }),
+        defineField({
+          name: 'description',
+          title: 'CTA Description',
+          type: 'string',
+        }),
+      ],
+    }),
+    defineField({
       title: 'FAQ SECTION',
       name: 'faq',
       type: 'array',
