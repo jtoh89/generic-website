@@ -64,6 +64,36 @@ export default defineType({
       ],
     }),
     defineField({
+      title: 'SERVICES SECTION',
+      name: 'services',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          name: 'myObject',
+          title: 'My Object',
+          fields: [
+            {
+              name: 'service',
+              title: 'Service Name',
+              type: 'string',
+            },
+            {
+              name: 'serviceDescription',
+              title: 'Service Description',
+              type: 'text',
+              rows: 2,
+            },
+            {
+              name: 'icon',
+              title: 'React-Icon String',
+              type: 'string',
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
       name: 'title',
       description: 'This field is the title of your personal website.',
       title: 'Title',

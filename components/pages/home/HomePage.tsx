@@ -26,34 +26,7 @@ export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
   return (
     <>
       <Hero data={data?.hero} />
-      <Services
-        data={[
-          {
-            header: '10+ years of towing ',
-            subheader:
-              'With our years of experience, there are no problems that we cannot help you with.',
-            icon: 'BsClock',
-          },
-          {
-            subheader:
-              'Whether you have car issues at 4pm or 4am, we are here to help you.',
-            header: '24/7 Service',
-            icon: 'BsFastForward',
-          },
-          {
-            subheader:
-              'We are based in Daly City and can reach your location in minutes.',
-            header: 'Fast service',
-            icon: 'BsFastForwardCircle',
-          },
-          {
-            subheader:
-              'Our attitude sets us apart from other Daly City towing companies. We treat every customer like a neighbor.',
-            header: 'Friendly',
-            icon: 'BsFillPinMapFill',
-          },
-        ]}
-      />
+      <Services data={data?.services} />
       <WhyUs
         data={{
           header: 'WE ARE COMMITTED TO EXCELLENCE',

@@ -8,6 +8,8 @@ import {
 import styles from './Services.module.css'
 
 const Services = ({ data }) => {
+  console.log('JonO Services data: ', data)
+
   return (
     <div className={styles.container}>
       <h2>Services</h2>
@@ -35,8 +37,8 @@ const Services = ({ data }) => {
             return (
               <div key={i} className={styles.itemContainer}>
                 {icon}
-                <h2 className={styles.text}>{item.header}</h2>
-                <p>{item.subheader}</p>
+                <h2 className={styles.text}>{item.service}</h2>
+                <p>{item.serviceDescription}</p>
               </div>
             )
           })}

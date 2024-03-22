@@ -31,6 +31,8 @@ export interface ShowcaseProject {
 
 export interface HomePagePayload {
   seo: any
+  hero: any
+  services: any[]
   title?: string
   heroImage: Image
   overview?: PortableTextBlock[]
