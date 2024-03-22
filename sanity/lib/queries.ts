@@ -15,10 +15,9 @@ export const aboutPageQuery = groq`
     _id,
     seo,
     hero,
-    heroImage,
     mission,
+    ctaSection,
     team,
-    overview,
     title,
   }
 `

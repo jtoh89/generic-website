@@ -22,13 +22,13 @@ export function AboutPage({ data }: AboutPageProps) {
           smallHeader: 'Our Mission',
           h2: data.mission.header,
           text: data.mission.description,
-          image: data.heroImage,
+          image: data.mission.image,
         }}
       />
       <TextFeatureVertical
         content={{
-          h2: 'Title',
-          text: 'Our AI answering service is effective at filtering out spam call',
+          h2: data.ctaSection.header,
+          text: data.ctaSection.description,
         }}
       />
       <Team teamMembers={data.team} />

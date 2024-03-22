@@ -91,6 +91,24 @@ export default defineType({
       ],
     }),
     defineField({
+      title: 'CTA SECTION',
+      name: 'ctaSection',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'header',
+          title: 'Header',
+          type: 'string',
+        }),
+        defineField({
+          name: 'description',
+          title: 'Description',
+          type: 'text',
+          rows: 2,
+        }),
+      ],
+    }),
+    defineField({
       title: 'TEAM MEMBERS',
       name: 'team',
       type: 'array',

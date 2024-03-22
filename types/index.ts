@@ -42,11 +42,10 @@ export interface AboutPagePayload {
   seo: any
   title: string
   hero: any
-  footer?: PortableTextBlock[]
-  overview?: PortableTextBlock[]
-  heroImage: Image
-  team: any[]
   mission: any
+  ctaSection: any
+  team: any[]
+  footer?: PortableTextBlock[]
 }
 
 export interface BlogPagePayload {
