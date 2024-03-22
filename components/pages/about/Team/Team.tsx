@@ -5,25 +5,25 @@ import { urlForImage } from '@/sanity/lib/image'
 
 import styles from './Team.module.css'
 
-const Team = ({ profiles }) => {
+const Team = ({ teamMembers }) => {
   return (
     <div className={styles.mainLayout}>
       <h2>Meet the Team</h2>
       <div className={styles.cardContainer}>
-        {profiles.map((profile, i) => (
+        {teamMembers.map((teamMember, i) => (
           <div key={i} className={styles.card}>
             <div className={styles.imageContainer}>
               <Image
                 className={styles.image}
-                src={urlForImage(profile.image).url()}
+                src={urlForImage(teamMember.image).url()}
                 fill
                 style={{ objectFit: 'cover' }}
                 alt=""
               />
             </div>
-            <h3>{profile.name}</h3>
-            <p>{profile.role}</p>
-            <p>{profile.bio}</p>
+            <h3>{teamMember.fullName}</h3>
+            <p>{teamMember.title}</p>
+            <p>{teamMember.description}</p>
           </div>
         ))}
       </div>

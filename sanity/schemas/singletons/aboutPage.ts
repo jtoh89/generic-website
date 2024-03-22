@@ -8,39 +8,30 @@ export default defineType({
   // liveEdit: true,
   fields: [
     defineField({
-      name: 'metaTitle',
-      description: 'Meta title for SEO',
-      title: 'Meta Title',
-      type: 'string',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      name: 'metaDescription',
-      description: 'Meta description for SEO',
-      title: 'Meta Description',
-      type: 'string',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      name: 'heroImage',
-      title: 'Hero Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      title: 'SEO SECTION',
+      name: 'seo',
+      type: 'object',
       fields: [
         defineField({
-          name: 'alt',
+          name: 'metaTitle',
+          description: 'Meta title for SEO',
+          title: 'Meta Title',
           type: 'string',
-          title: 'Alt text',
-          description: 'Alt text',
+          validation: (rule) => rule.required(),
+        }),
+        defineField({
+          name: 'metaDescription',
+          description: 'Meta description for SEO',
+          title: 'Meta Description',
+          type: 'string',
+          validation: (rule) => rule.required(),
         }),
       ],
     }),
     defineField({
-      name: 'mission',
+      title: 'HERO SECTION',
+      name: 'hero',
       type: 'object',
-      title: 'Mission',
       fields: [
         defineField({
           name: 'header',
@@ -48,9 +39,38 @@ export default defineType({
           type: 'string',
         }),
         defineField({
-          name: 'subheader',
-          title: 'SubHeader',
+          name: 'image',
+          title: 'Hero Image',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            defineField({
+              name: 'altText',
+              type: 'string',
+              title: 'Hero Alt Text',
+              description: 'Alt text',
+            }),
+          ],
+        }),
+      ],
+    }),
+    defineField({
+      title: 'MISSION SECTION',
+      name: 'mission',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'header',
+          title: 'Header',
           type: 'string',
+        }),
+        defineField({
+          name: 'description',
+          title: 'Description',
+          type: 'text',
+          rows: 4,
         }),
         defineField({
           name: 'image',
@@ -71,8 +91,8 @@ export default defineType({
       ],
     }),
     defineField({
+      title: 'TEAM MEMBERS',
       name: 'team',
-      title: 'Team Members',
       type: 'array',
       of: [
         {

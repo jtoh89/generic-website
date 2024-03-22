@@ -39,14 +39,14 @@ export interface HomePagePayload {
 }
 
 export interface AboutPagePayload {
-  metaTitle: string
-  metaDescription: string
+  seo: any
   title: string
+  hero: any
   footer?: PortableTextBlock[]
   overview?: PortableTextBlock[]
   heroImage: Image
-  team: any
-  mission: any[]
+  team: any[]
+  mission: any
 }
 
 export interface BlogPagePayload {

@@ -1,13 +1,21 @@
 import dynamic from 'next/dynamic'
-import { draftMode } from 'next/headers'
-import Link from 'next/link'
 
 import { AboutPage } from '@/components/pages/about/AboutPage'
 import { loadAboutPage } from '@/sanity/loader/loadQuery'
+import { Metadata, ResolvingMetadata } from 'next'
 
 const AboutPagePreview = dynamic(
   () => import('@/components/pages/about/AboutPage'),
 )
+
+export async function generateMetadata(): Promise<Metadata> {
+  const { data: aboutPage } = await loadAboutPage()
+
+  return {
+    title: aboutPage?.seo.metaTitle,
+    description: aboutPage?.seo.metaDescription,
+  }
+}
 
 export default async function IndexRoute() {
   const initial = await loadAboutPage()

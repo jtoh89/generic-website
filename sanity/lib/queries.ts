@@ -13,8 +13,8 @@ export const homePageQuery = groq`
 export const aboutPageQuery = groq`
   *[_type == "about"][0]{
     _id,
-    metaTitle,
-    metaDescription,
+    seo,
+    hero,
     heroImage,
     mission,
     team,

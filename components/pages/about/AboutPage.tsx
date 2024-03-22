@@ -15,13 +15,13 @@ export function AboutPage({ data }: AboutPageProps) {
 
   return (
     <>
-      <SharedHero title={data.title} image={data.heroImage} />
+      <SharedHero title={data.hero.header} image={data.hero.image} />
       <FeatureImage
         invert={false}
         content={{
-          smallHeader: '',
-          h2: 'H2 Title over here',
-          text: 'Our AI answering service is effective at filtering out spam calls, qualifying leads, and routing them to the proper destination.',
+          smallHeader: 'Our Mission',
+          h2: data.mission.header,
+          text: data.mission.description,
           image: data.heroImage,
         }}
       />
@@ -31,16 +31,7 @@ export function AboutPage({ data }: AboutPageProps) {
           text: 'Our AI answering service is effective at filtering out spam call',
         }}
       />
-      <Team
-        profiles={[
-          {
-            name: 'John Doe',
-            role: 'CEO',
-            image: data.heroImage,
-            bio: 'Our AI answering service is effective at filtering out spam calls, qualifying leads, and routing them to the proper destination.',
-          },
-        ]}
-      />
+      <Team teamMembers={data.team} />
       {/* <FeatureImage
         invert={false}
         content={{
