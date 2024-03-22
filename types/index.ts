@@ -34,6 +34,8 @@ export interface HomePagePayload {
   hero: any
   services: any[]
   companyHighlights: any[]
+  contentPiece: any
+  featureImage: any
   title?: string
   heroImage: Image
   faq: any[]

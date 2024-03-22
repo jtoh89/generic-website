@@ -167,6 +167,63 @@ export default defineType({
       ],
     }),
     defineField({
+      title: 'CONTENT PIECE',
+      name: 'contentPiece',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'header',
+          title: 'Header',
+          type: 'string',
+        }),
+        defineField({
+          name: 'description',
+          title: 'Description',
+          type: 'text',
+          rows: 3,
+        }),
+      ],
+    }),
+    defineField({
+      title: 'FEATURE WITH IMAGE',
+      name: 'featureImage',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'smallHeader',
+          title: 'Small Header',
+          type: 'string',
+        }),
+        defineField({
+          name: 'header',
+          title: 'Header',
+          type: 'string',
+        }),
+        defineField({
+          name: 'description',
+          title: 'Description',
+          type: 'text',
+          rows: 3,
+        }),
+        defineField({
+          name: 'image',
+          title: 'Image',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            defineField({
+              name: 'altText',
+              type: 'string',
+              title: 'Hero Alt Text',
+              description: 'Alt text',
+            }),
+          ],
+        }),
+      ],
+    }),
+    defineField({
       name: 'title',
       description: 'This field is the title of your personal website.',
       title: 'Title',

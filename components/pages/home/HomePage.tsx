@@ -22,6 +22,8 @@ export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
   // Default to an empty object to allow previews on non-existent documents
   const { overview = [], title = '', heroImage } = data ?? {}
 
+  console.log('JonO HomePage data: ', data)
+
   return (
     <>
       <Hero data={data?.hero} />
@@ -29,16 +31,19 @@ export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
       <WhyUs data={data?.companyHighlights} />
       <TextFeatureVertical content={{ h2: title, text: overview }} />
       <TextFeatureHorizontal
-        content={{ h2: title, text: overview }}
+        content={{
+          h2: data?.contentPiece.header,
+          text: data?.contentPiece.description,
+        }}
         invert={false}
       />
       <FeatureImage
         invert={false}
         content={{
-          smallHeader: 'Small Header',
-          h2: 'H2 Title over here',
-          text: 'Our AI answering service is effective at filtering out spam calls, qualifying leads, and routing them to the proper destination.',
-          image: heroImage,
+          smallHeader: data?.featureImage.smallHeader,
+          h2: data?.featureImage.header,
+          text: data?.featureImage.description,
+          image: data?.featureImage.image,
         }}
       />
       <Faq data={data?.faq} />

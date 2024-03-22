@@ -10,8 +10,6 @@ import SelectIcon from '@/components/shared/IconSelector'
 import styles from './Services.module.css'
 
 const Services = ({ data }) => {
-  console.log('JonO Services data: ', data)
-
   return (
     <div className={styles.container}>
       <h2>Services</h2>

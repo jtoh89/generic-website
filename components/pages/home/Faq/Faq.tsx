@@ -1,8 +1,9 @@
 'use client'
 import Image from 'next/image'
 import React, { useState } from 'react'
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
+
 import styles from './Faq.module.css'
-import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io'
 
 const Faq = ({ data }) => {
   const [indexopen, setIndexOpen] = useState<number>(99999)

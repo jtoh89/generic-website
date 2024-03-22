@@ -7,7 +7,6 @@ import { urlForImage } from '@/sanity/lib/image'
 import styles from './Hero.module.css'
 
 const Hero = ({ data }) => {
-  console.log('JonO Hero data: ', data)
   return (
     <div className={styles.heroContainer}>
       <div className={styles.innerContainer}>
