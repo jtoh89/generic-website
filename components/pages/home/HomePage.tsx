@@ -20,16 +20,12 @@ export interface HomePageProps {
 
 export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
   // Default to an empty object to allow previews on non-existent documents
-  const {
-    overview = [],
-    showcaseProjects = [],
-    title = '',
-    heroImage,
-  } = data ?? {}
+  const { overview = [], title = '', heroImage } = data ?? {}
+  console.log('JonO HomePage data: ', data)
 
   return (
     <>
-      <Hero data={data} />
+      <Hero data={data?.hero} />
       <Services
         data={[
           {

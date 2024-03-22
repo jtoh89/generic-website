@@ -36,8 +36,6 @@ const Faq = () => {
 
   const itemsOndData = Object.keys(Data).length
 
-  console.log('JonO itemsOndData: ', itemsOndData)
-
   return (
     <section className={styles.faqContainer}>
       <div className={styles.title}>

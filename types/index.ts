@@ -30,8 +30,7 @@ export interface ShowcaseProject {
 // Page payloads
 
 export interface HomePagePayload {
-  metaTitle: string
-  metaDescription: string
+  seo: any
   title?: string
   heroImage: Image
   overview?: PortableTextBlock[]

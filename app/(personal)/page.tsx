@@ -13,11 +13,9 @@ const HomePagePreview = dynamic(
 
 export async function generateMetadata(): Promise<Metadata> {
   const { data: homePage } = await loadHomePage()
-  console.log('JonO Metadata homePage: ', homePage)
-
   return {
-    title: homePage?.metaTitle,
-    description: homePage?.metaDescription,
+    title: homePage?.seo.metaTitle,
+    description: homePage?.seo.metaDescription,
   }
 }
 

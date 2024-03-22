@@ -12,15 +12,15 @@ const Hero = ({ data }) => {
     <div className={styles.heroContainer}>
       <div className={styles.innerContainer}>
         <div className={styles.textSection}>
-          <h1>{data.title}</h1>
-          <h2>{data.overview}</h2>
+          <h1>{data.header}</h1>
+          <h2>{data.subheader}</h2>
         </div>
         <div className={styles.imageHolder}>
           <Image
-            src={urlForImage(data.heroImage).url()}
+            src={urlForImage(data.image).url()}
             height={231}
             width={367}
-            alt={data.heroImage.alt}
+            alt={data.image.altText}
           />
         </div>
         <div className={styles.button}>
