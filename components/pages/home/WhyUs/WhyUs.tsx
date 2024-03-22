@@ -15,21 +15,18 @@ const WhyUs = ({ data }) => {
           <p>{data.subheader}</p>
         </div>
         <div className={`${styles.itemsContainer}`}>
-          {data.content.map((category, i) => {
+          {data.companyHighlights.map((highlight, i) => {
             return (
               <div
                 key={i}
-                className={`${styles.item} ${i === data.content.length && styles.noMarginBottom}`}
+                className={`${styles.item} ${i === data.companyHighlights.length && styles.noMarginBottom}`}
               >
                 <div className={styles.icon}>
-                  {(i === 0 &&
-                    SelectIcon({ icon: 'BsHandThumbsUp', size: 50 })) ||
-                    (i === 1 && SelectIcon({ icon: 'BsTools', size: 50 })) ||
-                    (i === 2 && SelectIcon({ icon: 'BsPeople', size: 50 }))}
+                  {SelectIcon({ icon: highlight.icon, size: 50 })}
                 </div>
                 <div>
-                  <h3>{category.contentHeader}</h3>
-                  <p>{category.text[0]}</p>
+                  <h3>{highlight.header}</h3>
+                  <p>{highlight.highlightDescription}</p>
                 </div>
               </div>
             )

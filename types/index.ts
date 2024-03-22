@@ -33,6 +33,7 @@ export interface HomePagePayload {
   seo: any
   hero: any
   services: any[]
+  companyHighlights: any[]
   title?: string
   heroImage: Image
   overview?: PortableTextBlock[]

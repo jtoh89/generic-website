@@ -94,6 +94,54 @@ export default defineType({
       ],
     }),
     defineField({
+      title: 'COMPANY HIGHLIGHTS SECTION',
+      name: 'companyHighlights',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'header',
+          title: 'Header',
+          type: 'string',
+        }),
+        defineField({
+          name: 'subheader',
+          title: 'SubHeader',
+          type: 'text',
+          rows: 3,
+        }),
+        defineField({
+          title: 'Company Highlights',
+          name: 'companyHighlights',
+          type: 'array',
+          of: [
+            {
+              type: 'object',
+              name: 'Highlight',
+              title: 'Highlight',
+              fields: [
+                {
+                  name: 'header',
+                  title: 'Header',
+                  type: 'string',
+                },
+                {
+                  name: 'highlightDescription',
+                  title: 'Highlight Description',
+                  type: 'text',
+                  rows: 3,
+                },
+                {
+                  name: 'icon',
+                  title: 'React-Icon String',
+                  type: 'string',
+                },
+              ],
+            },
+          ],
+        }),
+      ],
+    }),
+    defineField({
       name: 'title',
       description: 'This field is the title of your personal website.',
       title: 'Title',

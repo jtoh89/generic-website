@@ -27,36 +27,7 @@ export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
     <>
       <Hero data={data?.hero} />
       <Services data={data?.services} />
-      <WhyUs
-        data={{
-          header: 'WE ARE COMMITTED TO EXCELLENCE',
-          subheader:
-            'Reputation is everything so we uphold a high standard to our services. We aim to be the best towing company in Daly City, CA by leaving every one of our customers happy after we provide our services.',
-          content: [
-            {
-              contentHeader: 'Satisfaction Guaranteed',
-              text: [
-                'In all of our years in the towing business, we have never failed to help drivers in need.',
-              ],
-              listItems: [],
-            },
-            {
-              contentHeader: 'Quality Equipment',
-              text: [
-                'All of our drivers are thoroughly trained and equipped with well-maintained trucks and tools.',
-              ],
-              listItems: [],
-            },
-            {
-              contentHeader: 'Elite Team',
-              text: [
-                'Our team members are carefully selected and undergo thorough training to ensure the highest level of service. We only hire the best in the industry.',
-              ],
-              listItems: [],
-            },
-          ],
-        }}
-      />
+      <WhyUs data={data?.companyHighlights} />
       <TextFeatureVertical content={{ h2: title, text: overview }} />
       <TextFeatureHorizontal
         content={{ h2: title, text: overview }}
