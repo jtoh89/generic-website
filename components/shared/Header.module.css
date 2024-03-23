@@ -5,7 +5,7 @@
 .pageTitle {
   font-size: var(--font-size-XL);
   line-height: var(--line-height-XL);
-  font-weight: 800;
+  font-weight: var(--font-weight-L);
   margin-bottom: var(--space-S);
 }
 

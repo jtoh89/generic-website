@@ -85,7 +85,6 @@ const BlogCard = ({ headerImage, slug, title, subTitle, publishDate }) => {
           <Link href={`/blog/${slug}`}>{title}</Link>
         </h2>
         <p className={styles.date}>{publishDate}</p>
-        {/* <span className={styles.span}>{date}</span> */}
         <p>{shortenString(subTitle || '', 100)}</p>
         <p className={styles.continueRead}>
           <Link href={`/blog/${slug}`}>Continue Reading</Link>

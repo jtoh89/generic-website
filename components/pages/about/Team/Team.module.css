@@ -33,7 +33,7 @@
 
 .card h3 {
   margin-top: var(--space-M);
-  font-weight: 700;
+  font-weight: var(--font-weight-M);
 }
 
 .card p {

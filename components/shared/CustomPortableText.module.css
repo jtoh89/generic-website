@@ -1,6 +1,6 @@
 .h2 {
   font-size: var(--font-size-L);
-  font-weight: 800;
+  font-weight: var(--font-weight-XL);
   line-height: var(--line-height-L);
   margin-bottom: var(--space-M);
 }

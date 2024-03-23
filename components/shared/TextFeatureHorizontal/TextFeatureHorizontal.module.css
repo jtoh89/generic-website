@@ -16,7 +16,7 @@
   font-size: var(--font-size-L);
   line-height: var(--font-size-l-lineheight);
   margin-bottom: var(--bottom-margin-m);
-  font-weight: 800;
+  font-weight: var(--font-weight-L);
 }
 
 .innerLayout p {

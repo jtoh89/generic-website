@@ -6,11 +6,12 @@
 
 .container h2 {
   font-size: var(--font-size-S);
+  font-weight: var(--font-weight-XL);
 }
 
 .container h3 {
   font-size: var(--font-size-XL);
-  font-weight: 500;
+  font-weight: var(--font-weight-S);
 }
 
 .cardContainer {
@@ -40,7 +41,7 @@
 
 .itemContainer h2 {
   font-size: var(--font-size-M);
-  font-weight: 800;
+  font-weight: var(--font-weight-L);
   margin-bottom: 8px;
 }
 

@@ -24,7 +24,7 @@
 
 .leftContainer h1 {
   font-size: var(--font-size-XL);
-  font-weight: 800;
+  font-weight: var(--font-weight-L);
 }
 
 .rightContainer {

@@ -41,8 +41,7 @@
 }
 
 .contact {
-  /* font-size: 14px; */
-  font-weight: 400;
+  font-weight: var(--font-weight-M);
   color: var(--white);
   background: var(--black);
   border: none;

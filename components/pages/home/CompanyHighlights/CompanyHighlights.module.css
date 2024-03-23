@@ -13,11 +13,7 @@
 .header h2 {
   font-size: var(--font-size-XL);
   margin-bottom: var(--space-L);
-}
-
-.header h3 {
-  font-size: var(--font-size-S);
-  line-height: normal;
+  font-weight: var(--font-weight-L);
 }
 
 .itemsContainer {
@@ -36,6 +32,7 @@
 
 .item h3 {
   font-size: var(--font-size-M);
+  font-weight: var(--font-weight-M);
   margin-bottom: var(--subheader-padding);
 }
 

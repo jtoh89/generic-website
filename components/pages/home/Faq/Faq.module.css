@@ -17,30 +17,17 @@
 }
 
 .title h2 {
-  color: #4b3d91; /* Example color value for darkPurple */
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 1.25; /* Example line-height value */
+  color: #4b3d91;
+  font-size: var(--font-size-XL);
+  font-weight: var(--font-weight-L);
 }
 
 .line {
-  background-color: #d9d7e0; /* Example color value for lightPurple */
-  margin-top: 1.25rem; /* Example margin-top value for my-5 */
-  margin-bottom: 1.25rem; /* Example margin-bottom value for my-5 */
-  height: 1px; /* Example height value for h-[1px] */
-  width: 100%; /* Full width */
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 600px;
-    padding: 2.5rem;
-  }
-
-  .title h2 {
-    font-size: 56px;
-    line-height: 1.1;
-  }
+  background-color: #d9d7e0;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  height: 1px;
+  width: 100%;
 }
 
 /* FAQ Item */
@@ -57,7 +44,7 @@
 
 .faqItemHeader h4 {
   font-size: var(--font-size-S);
-  font-weight: 800;
+  font-weight: var(--font-weight-L);
 }
 
 .faqItemText {

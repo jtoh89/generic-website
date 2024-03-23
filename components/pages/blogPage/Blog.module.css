@@ -42,7 +42,7 @@
 .cardContent h2 {
   font-size: var(--font-size-S);
   margin-bottom: 8px;
-  font-weight: bold;
+  font-weight: var(--font-weight-L);
 }
 
 .cardContent h2:hover {
@@ -59,25 +59,11 @@
 
 .continueRead {
   font-size: var(--font-size-M) !important;
-  font-weight: var(--font-weight-HEAVY);
+  font-weight: var(--font-weight-XL);
 }
 
 .continueRead:hover {
   color: var(--secondary-color);
-}
-
-.span {
-  margin: 13px 0 0 13px;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 20px;
-  color: var(--gray);
-}
-
-.tagContainer {
-  bottom: 0;
-  position: absolute;
-  margin: 0 29px 13px 13px;
 }
 
 @media only screen and (max-width: 1200px) {

@@ -16,7 +16,7 @@
   font-size: 60px;
   line-height: var(--font-size-xl-lineheight);
   margin-bottom: var(--bottom-margin-m);
-  font-weight: 800;
+  font-weight: var(--font-weight-XL);
 }
 
 .textSection h2 {
