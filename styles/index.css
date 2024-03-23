@@ -166,5 +166,7 @@ main {
 
     --container-padding-yx: 50px 10px;
     --standard-padding-yx: 80px 30px;
+    --standard-padding-y: 80px;
+    --standard-padding-x: 30px;
   }
 }

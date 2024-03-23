@@ -38,7 +38,7 @@ export function Blog({ data, config }: Props) {
   }
 
   return (
-    <div className={styles.blogContainer}>
+    <div className={styles.container}>
       <SharedHero title={config?.hero.header} image={config?.hero.image} />
       <div className={`${styles.innerContainer}`}>
         {itemsToDisplay?.map((blog, i) => (
@@ -68,11 +68,11 @@ export function Blog({ data, config }: Props) {
 
 const BlogCard = ({ headerImage, slug, title, subTitle, publishDate }) => {
   return (
-    <div className={styles.blogCard}>
-      <div className={styles.blogCardImageContainer}>
+    <div className={styles.card}>
+      <div className={styles.cardImageContainer}>
         <Link href={`/blog/${slug}`}>
           <Image
-            className={styles.blogCardImage}
+            className={styles.cardImage}
             src={urlForImage(headerImage)?.url() || ''}
             objectFit="cover"
             fill={true}

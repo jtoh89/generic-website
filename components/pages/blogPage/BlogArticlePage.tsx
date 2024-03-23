@@ -22,23 +22,21 @@ export async function generateMetadata(
 }
 
 export function BlogArticlePage({ data }: PageProps) {
-  const { headerImage, body, subTitle, title, publishDate } = data ?? {}
-
   return (
-    <section className={styles.page}>
-      <div className={styles.pageContent}>
+    <section className={styles.container}>
+      <div className={styles.content}>
         <Header title={data?.title} description={data?.subTitle} />
 
-        {headerImage && (
+        {data?.headerImage && (
           <Image
             className="page-header-image"
-            src={urlForImage(headerImage).url()}
+            src={urlForImage(data?.headerImage).url()}
             height={231}
             width={367}
             alt=""
           />
         )}
-        {body && <CustomPortableText value={body} />}
+        {data?.body && <CustomPortableText value={data?.body} />}
       </div>
     </section>
   )

@@ -1,15 +1,14 @@
-.page {
+.container {
   width: 100%;
-  padding-top: 0 var(--standard-padding-x);
-  padding-bottom: var(--standard-padding-y);
+  padding: var(--standard-padding-yx);
 }
 
-.pageContent {
+.content {
   max-width: var(--max-width);
   margin: 0 auto;
 }
 
-.pageContent a {
+.content a {
   color: var(--blue-600);
   text-decoration: none;
 }
