@@ -65,7 +65,7 @@ export interface BlogArticlePayload {
   slug?: string
 }
 
-export interface BlogPayload {
+export interface BlogArticleCardPayload {
   title?: string
   slug?: string
   headerImage?: Image

@@ -16,7 +16,7 @@ import { token } from '@/sanity/lib/token'
 import {
   AboutPagePayload,
   BlogArticlePayload,
-  BlogPayload,
+  BlogArticleCardPayload,
   HomePagePayload,
   ProjectPayload,
   SettingsPayload,
@@ -109,7 +109,7 @@ export function loadPage(slug: string) {
 }
 
 export function allBlogPages() {
-  return loadQuery<BlogPayload[] | null>(
+  return loadQuery<BlogArticleCardPayload[] | null>(
     allPagesQuery,
     {},
     { next: { tags: ['blog'] } },
