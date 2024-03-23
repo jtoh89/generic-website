@@ -6,19 +6,19 @@ import { draftMode } from 'next/headers'
 import { client } from '@/sanity/lib/client'
 import {
   aboutPageQuery,
-  allPagesQuery,
+  blogArticlesBySlugQuery,
+  blogArticlesQuery,
   blogPageQuery,
   homePageQuery,
-  pagesBySlugQuery,
   projectBySlugQuery,
   settingsQuery,
 } from '@/sanity/lib/queries'
 import { token } from '@/sanity/lib/token'
 import {
   AboutPagePayload,
-  BlogPayload,
-  BlogArticlePayload,
   BlogArticleCardPayload,
+  BlogArticlePayload,
+  BlogPayload,
   HomePagePayload,
   ProjectPayload,
   SettingsPayload,
@@ -112,7 +112,7 @@ export function loadBlogPage() {
 
 export function loadPage(slug: string) {
   return loadQuery<BlogArticlePayload | null>(
-    pagesBySlugQuery,
+    blogArticlesBySlugQuery,
     { slug },
     { next: { tags: [`blogArticles:${slug}`] } },
   )
@@ -120,7 +120,7 @@ export function loadPage(slug: string) {
 
 export function allBlogPages() {
   return loadQuery<BlogArticleCardPayload[] | null>(
-    allPagesQuery,
+    blogArticlesQuery,
     {},
     { next: { tags: ['blog'] } },
   )

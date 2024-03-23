@@ -36,7 +36,7 @@ export const blogPageQuery = groq`
   }
 `
 
-export const pagesBySlugQuery = groq`
+export const blogArticlesBySlugQuery = groq`
   *[_type == "blogArticles" && slug.current == $slug][0] {
     _id,
     body,
@@ -49,7 +49,7 @@ export const pagesBySlugQuery = groq`
   }
 `
 
-export const allPagesQuery = groq`
+export const blogArticlesQuery = groq`
   *[_type == "blogArticles"] {
     _id,
     title,

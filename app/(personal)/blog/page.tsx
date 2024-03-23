@@ -11,8 +11,6 @@ import { allBlogPages, loadBlogPage } from '@/sanity/loader/loadQuery'
 export async function generateMetadata(): Promise<Metadata> {
   const { data: blogPage } = await loadBlogPage()
 
-  console.log('JonO blogPage: ', blogPage)
-
   return {
     title: blogPage?.seo.metaTitle,
     description: blogPage?.seo.metaDescription,

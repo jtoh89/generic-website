@@ -4,10 +4,6 @@ import dynamic from 'next/dynamic'
 import { AboutPage } from '@/components/pages/about/AboutPage'
 import { loadAboutPage } from '@/sanity/loader/loadQuery'
 
-const AboutPagePreview = dynamic(
-  () => import('@/components/pages/about/AboutPage'),
-)
-
 export async function generateMetadata(): Promise<Metadata> {
   const { data: aboutPage } = await loadAboutPage()
 

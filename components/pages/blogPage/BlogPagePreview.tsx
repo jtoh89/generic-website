@@ -2,7 +2,7 @@
 
 import { type QueryResponseInitial } from '@sanity/react-loader'
 
-import { pagesBySlugQuery } from '@/sanity/lib/queries'
+import { blogArticlesBySlugQuery } from '@/sanity/lib/queries'
 import { useQuery } from '@/sanity/loader/useQuery'
 import { BlogArticlePayload } from '@/types'
 
@@ -16,7 +16,7 @@ type Props = {
 export default function PagePreview(props: Props) {
   const { params, initial } = props
   const { data } = useQuery<BlogArticlePayload | null>(
-    pagesBySlugQuery,
+    blogArticlesBySlugQuery,
     params,
     {
       initial,
