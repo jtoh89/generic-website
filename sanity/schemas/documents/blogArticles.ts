@@ -92,6 +92,7 @@ export default defineType({
             { title: 'Normal', value: 'normal' },
             { title: 'Quote', value: 'blockquote' },
           ],
+          lists: [{ title: 'Bullet', value: 'bullet' }],
         }),
         // Custom blocks
         defineArrayMember({

@@ -15,7 +15,14 @@ export function CustomPortableText({ value }: { value: PortableTextBlock[] }) {
         return <h2 className={styles.h2}>{children}</h2>
       },
       normal: ({ children }) => {
+        console.log('JonO normal children', children)
+
         return <p className={styles.normal}>{children}</p>
+      },
+    },
+    list: {
+      bullet: ({ children }) => {
+        return <ul className={styles.bullet}>{children}</ul>
       },
     },
     marks: {

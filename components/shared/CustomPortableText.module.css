@@ -1,6 +1,6 @@
 .h2 {
   font-size: var(--font-size-L);
-  font-weight: var(--font-weight-XL);
+  font-weight: var(--font-weight-L);
   line-height: var(--line-height-L);
   margin-bottom: var(--space-M);
 }
@@ -8,6 +8,10 @@
 .normal {
   font-size: var(--font-size-S);
   line-height: var(--line-height-S);
+}
+
+.bullet {
+  margin-top: var(--space-M);
 }
 
 .image {
