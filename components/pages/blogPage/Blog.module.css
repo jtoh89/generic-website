@@ -1,18 +1,14 @@
 .blogContainer {
-  margin: 0 auto;
-  max-width: var(--max-width);
-  padding: 0 var(--container-padding-x);
+  padding-bottom: var(--standard-padding-y);
 }
 
 .innerContainer {
-  /* display: flex;
-  justify-content: center; */
+  max-width: var(--max-width);
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  /* background-color: red; */
-  /* flex-wrap: wrap; */
-  /* align-items: center; */
+  padding-top: var(--standard-padding-y);
 }
 
 .paginatin {

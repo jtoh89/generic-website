@@ -1,22 +1,20 @@
 'use client'
 
-import { toPlainText } from '@portabletext/react'
 import { Pagination } from 'antd'
-import { Tag } from 'antd'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
-import { CustomPortableText } from '@/components/shared/CustomPortableText'
 import { Header } from '@/components/shared/Header'
 import SharedHero from '@/components/shared/Hero/SharedHero'
 import { urlForImage } from '@/sanity/lib/image'
-import type { BlogArticlePayload } from '@/types'
+import type { BlogArticlePayload, BlogPayload } from '@/types'
 
 import styles from './Blog.module.css'
 
 export interface Props {
   data: BlogArticlePayload[] | null
+  config: BlogPayload | null
 }
 
 function shortenString(str, maxChars) {
@@ -26,7 +24,7 @@ function shortenString(str, maxChars) {
   return str
 }
 
-export function Blog({ data }: Props) {
+export function Blog({ data, config }: Props) {
   const itemsPerPage = 6
   const totalItems = data?.length || 0
   const [currentPage, setCurrentPage] = useState(1)
@@ -39,11 +37,11 @@ export function Blog({ data }: Props) {
   const handlePageChange = (page) => {
     setCurrentPage(page)
   }
+
   return (
     <div className={styles.blogContainer}>
-      <Header title={'Blog Page'} description={['Test descrtiption here']} />
-      {/* <SharedHero title={'Test descrtiption here'} image={} /> */}
-      <div className={styles.innerContainer}>
+      <SharedHero title={config?.hero.header} image={config?.hero.image} />
+      <div className={`${styles.innerContainer}`}>
         {itemsToDisplay?.map((blog, i) => (
           <BlogCard
             key={i}

@@ -96,6 +96,8 @@ body {
 
   --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
+  --container-padding-x: 20px;
+  --container-padding-y: 50px;
   --container-padding-yx: 50px 20px;
   --standard-padding-yx: 80px 50px;
   --standard-padding-y: 80px;

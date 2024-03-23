@@ -1,7 +1,4 @@
-import { toPlainText } from '@portabletext/react'
-import { Metadata, ResolvingMetadata } from 'next'
-import dynamic from 'next/dynamic'
-import { draftMode } from 'next/headers'
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import { Blog } from '@/components/pages/blogPage/Blog'
@@ -23,16 +20,11 @@ export function generateStaticParams() {
 
 export default async function PageSlugRoute(Props) {
   const initial = await allBlogPages()
+  const blogPageConfig = await loadBlogPage()
 
-  console.log('JonO blog page initial:', initial)
-
-  // if (draftMode().isEnabled) {
-  //   return <PagePreview data={initial} />
-  // }
-
-  if (!initial.data) {
+  if (!initial.data || !blogPageConfig.data) {
     notFound()
   }
 
-  return <Blog data={initial.data} />
+  return <Blog data={initial.data} config={blogPageConfig.data} />
 }
