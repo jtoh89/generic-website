@@ -1,14 +1,12 @@
-import type { EncodeDataAttributeCallback } from '@sanity/react-loader'
-
 import Hero from '@/components/pages/home/Hero/Hero'
 import FeatureImage from '@/components/shared/FeatureImage/FeatureImage'
 import TextFeatureHorizontal from '@/components/shared/TextFeatureHorizontal/TextFeatureHorizontal'
 import TextFeatureVertical from '@/components/shared/TextFeatureVertical/TextFeatureVertical'
 import type { HomePagePayload } from '@/types'
 
+import CompanyHighlights from './CompanyHighlights/CompanyHighlights'
 import Faq from './Faq/Faq'
 import Services from './Services/Services'
-import CompanyHighlights from './CompanyHighlights/CompanyHighlights'
 
 export interface HomePageProps {
   data: HomePagePayload | null
