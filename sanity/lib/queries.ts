@@ -86,3 +86,21 @@ export const settingsQuery = groq`
     ogImage,
   }
 `
+
+export const termsAndConditionsPageQuery = groq`
+  *[_type == "termsAndConditions"][0]{
+    _id,
+    seo,
+    title,
+    body,
+  }
+`
+
+export const privacyPolicyPageQuery = groq`
+  *[_type == "privacyPolicy"][0]{
+    _id,
+    seo,
+    title,
+    body,
+  }
+`

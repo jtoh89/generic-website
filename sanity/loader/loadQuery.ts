@@ -10,8 +10,10 @@ import {
   blogArticlesQuery,
   blogPageQuery,
   homePageQuery,
+  privacyPolicyPageQuery,
   projectBySlugQuery,
   settingsQuery,
+  termsAndConditionsPageQuery,
 } from '@/sanity/lib/queries'
 import { token } from '@/sanity/lib/token'
 import {
@@ -20,8 +22,10 @@ import {
   BlogArticlePayload,
   BlogPayload,
   HomePagePayload,
+  PrivacyPolicyPagePayload,
   ProjectPayload,
   SettingsPayload,
+  TermsAndConditionPagePayload,
 } from '@/types'
 
 const serverClient = client.withConfig({
@@ -123,5 +127,21 @@ export function allBlogPages() {
     blogArticlesQuery,
     {},
     { next: { tags: ['blog'] } },
+  )
+}
+
+export function loadTermsAndConditionsPage() {
+  return loadQuery<TermsAndConditionPagePayload | null>(
+    termsAndConditionsPageQuery,
+    {},
+    { next: { tags: ['termsAndConditions'] } },
+  )
+}
+
+export function loadPrivacyPolicyPage() {
+  return loadQuery<PrivacyPolicyPagePayload | null>(
+    privacyPolicyPageQuery,
+    {},
+    { next: { tags: ['privacyPolicy'] } },
   )
 }

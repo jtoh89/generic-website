@@ -97,3 +97,15 @@ export interface SettingsPayload {
   menuItems?: MenuItem[]
   ogImage?: Image
 }
+
+export interface TermsAndConditionPagePayload {
+  seo: any
+  title: string
+  body: any
+}
+
+export interface PrivacyPolicyPagePayload {
+  seo: any
+  title: string
+  body: any
+}

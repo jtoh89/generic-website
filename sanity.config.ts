@@ -19,7 +19,9 @@ import timeline from '@/sanity/schemas/objects/timeline'
 import about from '@/sanity/schemas/singletons/aboutPage'
 import blog from '@/sanity/schemas/singletons/blog'
 import home from '@/sanity/schemas/singletons/home'
+import privacyPolicy from '@/sanity/schemas/singletons/privacyPolicy'
 import settings from '@/sanity/schemas/singletons/settings'
+import termsAndConditions from '@/sanity/schemas/singletons/termsAndConditions'
 
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
@@ -38,6 +40,8 @@ export default defineConfig({
       about,
       blog,
       settings,
+      privacyPolicy,
+      termsAndConditions,
       // Documents
       duration,
       page,
@@ -49,7 +53,14 @@ export default defineConfig({
   },
   plugins: [
     deskTool({
-      structure: pageStructure([home, settings, about, blog]),
+      structure: pageStructure([
+        home,
+        settings,
+        about,
+        blog,
+        privacyPolicy,
+        termsAndConditions,
+      ]),
     }),
     presentationTool({
       locate,
@@ -60,7 +71,14 @@ export default defineConfig({
       },
     }),
     // Configures the global "new document" button, and document actions, to suit the Settings document singleton
-    singletonPlugin([home.name, settings.name, about.name, blog.name]),
+    singletonPlugin([
+      home.name,
+      settings.name,
+      about.name,
+      blog.name,
+      termsAndConditions.name,
+      privacyPolicy.name,
+    ]),
     // Add an image asset source for Unsplash
     unsplashImageAsset(),
     // Vision lets you query your content with GROQ in the studio

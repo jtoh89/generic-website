@@ -19,7 +19,9 @@ export const locate: DocumentLocationResolver = (params, context) => {
     params.type === 'about' ||
     params.type === 'blog' ||
     params.type === 'blogArticles' ||
-    params.type === 'project'
+    params.type === 'project' ||
+    params.type === 'termsAndConditions' ||
+    params.type === 'privacyPolicy'
   ) {
     const doc$ = context.documentStore.listenQuery(
       `*[_id==$id || references($id)]{_type,slug,title}`,
@@ -125,6 +127,61 @@ export const locate: DocumentLocationResolver = (params, context) => {
                 ? 'This document is used on all pages as it is in the top menu'
                 : undefined,
             } satisfies DocumentLocationsState
+            return isReferencedBySettings
+              ? ({
+                  locations: [
+                    {
+                      title:
+                        docs?.find((doc) => doc._type === 'home')?.title ||
+                        'Home',
+                      href: resolveHref(params.type)!,
+                    },
+                  ],
+                  tone: 'positive',
+                  message: 'This document is used to render the front page',
+                } satisfies DocumentLocationsState)
+              : ({
+                  tone: 'critical',
+                  message: `The top menu isn't linking to the home page. This might make it difficult for visitors to navigate your site.`,
+                } satisfies DocumentLocationsState)
+          case 'termsAndConditions':
+            return isReferencedBySettings
+              ? ({
+                  locations: [
+                    {
+                      title:
+                        docs?.find((doc) => doc._type === 'termsAndConditions')
+                          ?.title || 'Terms and Condition',
+                      href: resolveHref(params.type)!,
+                    },
+                  ],
+                  tone: 'positive',
+                  message:
+                    'This document is used to render the Terms and Condition page',
+                } satisfies DocumentLocationsState)
+              : ({
+                  tone: 'critical',
+                  message: `The top menu isn't linking to the Terms and Condition page. This might make it difficult for visitors to navigate your site.`,
+                } satisfies DocumentLocationsState)
+          case 'privacyPolicy':
+            return isReferencedBySettings
+              ? ({
+                  locations: [
+                    {
+                      title:
+                        docs?.find((doc) => doc._type === 'privacyPolicy')
+                          ?.title || 'Privacy Policy',
+                      href: resolveHref(params.type)!,
+                    },
+                  ],
+                  tone: 'positive',
+                  message:
+                    'This document is used to render the Privacy Policy page',
+                } satisfies DocumentLocationsState)
+              : ({
+                  tone: 'critical',
+                  message: `The top menu isn't linking to the Privacy Policy page. This might make it difficult for visitors to navigate your site.`,
+                } satisfies DocumentLocationsState)
           default:
             return {
               message: 'Unable to map document type to locations',

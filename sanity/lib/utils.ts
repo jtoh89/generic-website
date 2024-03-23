@@ -36,6 +36,10 @@ export function resolveHref(
       return slug ? `/${slug}` : undefined
     case 'project':
       return slug ? `/projects/${slug}` : undefined
+    case 'termsAndConditions':
+      return '/terms-and-conditions'
+    case 'privacyPolicy':
+      return '/privacy-policy'
     default:
       console.warn('Invalid document type:', documentType)
       return undefined

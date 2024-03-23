@@ -1,0 +1,9 @@
+.container {
+  padding: var(--standard-padding-yx);
+}
+
+.content h1 {
+  font-size: var(--font-size-XL);
+  margin-bottom: var(--space-S);
+  font-weight: var(--font-weight-XL);
+}
