@@ -10,9 +10,6 @@ export interface AboutPageProps {
 }
 
 export function AboutPage({ data }: AboutPageProps) {
-  // Default to an empty object to allow previews on non-existent documents
-  console.log('JonO AboutPage data: ', data)
-
   return (
     <>
       <SharedHero title={data.hero.header} image={data.hero.image} />

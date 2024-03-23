@@ -3,7 +3,6 @@ import type { PortableTextBlock } from '@portabletext/types'
 import Image from 'next/image'
 import { Image as sanityImage } from 'sanity'
 
-import ImageBox from '@/components/shared/ImageBox'
 import { TimelineSection } from '@/components/shared/TimelineSection'
 import { urlForImage } from '@/sanity/lib/image'
 

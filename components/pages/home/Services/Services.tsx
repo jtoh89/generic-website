@@ -1,10 +1,3 @@
-import {
-  BsClock,
-  BsFastForward,
-  BsFastForwardCircle,
-  BsFillPinMapFill,
-} from 'react-icons/bs'
-
 import SelectIcon from '@/components/shared/IconSelector'
 
 import styles from './Services.module.css'

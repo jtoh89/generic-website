@@ -1,5 +1,5 @@
 'use client'
-import Image from 'next/image'
+
 import React, { useState } from 'react'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 
@@ -13,8 +13,6 @@ const Faq = ({ data }) => {
   }
 
   const itemsOndData = Object.keys(data).length
-
-  console.log('JonO Faq data: ', data)
 
   return (
     <section className={styles.faqContainer}>

@@ -1,6 +1,4 @@
 import React from 'react'
-import { BsHandThumbsUp } from 'react-icons/bs'
-import { BsPeople, BsTools } from 'react-icons/bs'
 
 import SelectIcon from '@/components/shared/IconSelector'
 

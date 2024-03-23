@@ -1,5 +1,4 @@
-import { Metadata, ResolvingMetadata } from 'next'
-import dynamic from 'next/dynamic'
+import { Metadata } from 'next'
 
 import { AboutPage } from '@/components/pages/about/AboutPage'
 import { loadAboutPage } from '@/sanity/loader/loadQuery'

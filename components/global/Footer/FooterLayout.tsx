@@ -1,10 +1,12 @@
 import type { PortableTextBlock } from '@portabletext/types'
-import type { SettingsPayload } from '@/types'
 import Image from 'next/image'
-import styles from './Footer.module.css'
 import Link from 'next/link'
+import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'
+
 import Logo from '@/app/logo.png'
-import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa'
+import type { SettingsPayload } from '@/types'
+
+import styles from './Footer.module.css'
 
 interface FooterProps {
   data: SettingsPayload

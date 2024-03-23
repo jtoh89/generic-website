@@ -7,7 +7,6 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { FaBars } from 'react-icons/fa'
 
 import Logo from '@/app/logo.png'
-import { resolveHref } from '@/sanity/lib/utils'
 import type { MenuItem, SettingsPayload } from '@/types'
 
 import styles from './Navbar.module.css'
@@ -18,7 +17,6 @@ interface NavbarProps {
 export default function Navbar(props: NavbarProps) {
   const { data } = props
   const menuItems = data?.menuItems || ([] as MenuItem[])
-  console.log('JonO NavBar menuItems', menuItems)
 
   const [showSlider, toggleSlider] = useState(false)
 

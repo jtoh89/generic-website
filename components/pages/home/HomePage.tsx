@@ -1,12 +1,9 @@
 import type { EncodeDataAttributeCallback } from '@sanity/react-loader'
-import Link from 'next/link'
 
 import Hero from '@/components/pages/home/Hero/Hero'
-import { ProjectListItem } from '@/components/pages/home/ProjectListItem'
 import FeatureImage from '@/components/shared/FeatureImage/FeatureImage'
 import TextFeatureHorizontal from '@/components/shared/TextFeatureHorizontal/TextFeatureHorizontal'
 import TextFeatureVertical from '@/components/shared/TextFeatureVertical/TextFeatureVertical'
-import { resolveHref } from '@/sanity/lib/utils'
 import type { HomePagePayload } from '@/types'
 
 import Faq from './Faq/Faq'
@@ -19,11 +16,6 @@ export interface HomePageProps {
 }
 
 export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
-  // Default to an empty object to allow previews on non-existent documents
-  const { overview = [], title = '', heroImage } = data ?? {}
-
-  console.log('JonO HomePage data: ', data?.ctaSection)
-
   return (
     <>
       <Hero data={data?.hero} />

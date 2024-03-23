@@ -49,9 +49,6 @@
 
 @media only screen and (max-width: 768px) {
   .innerLayout {
-    /* grid-template-columns: 1fr; */
-    /* gap: 0%; */
-
     display: flex;
     flex-direction: column;
   }
@@ -61,6 +58,6 @@
   }
 
   .rightLayout {
-    height: 220px;
+    /* height: 220px; */
   }
 }

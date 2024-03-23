@@ -67,8 +67,6 @@ export function Blog({ data, config }: Props) {
 }
 
 const BlogCard = ({ headerImage, slug, title, subTitle, publishDate }) => {
-  console.log('JonO BlogCard publishDate: ', publishDate)
-
   return (
     <div className={styles.blogCard}>
       <div className={styles.blogCardImageContainer}>
