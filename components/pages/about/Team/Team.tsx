@@ -22,7 +22,7 @@ const Team = ({ teamMembers }) => {
               />
             </div>
             <h3>{teamMember.fullName}</h3>
-            <p>{teamMember.title}</p>
+            <h4>{teamMember.title}</h4>
             <p>{teamMember.description}</p>
           </div>
         ))}

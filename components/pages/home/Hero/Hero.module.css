@@ -13,7 +13,7 @@
 }
 
 .textSection h1 {
-  font-size: 60px;
+  font-size: var(--font-size-XXL);
   line-height: var(--font-size-xl-lineheight);
   margin-bottom: var(--bottom-margin-m);
   font-weight: var(--font-weight-XL);

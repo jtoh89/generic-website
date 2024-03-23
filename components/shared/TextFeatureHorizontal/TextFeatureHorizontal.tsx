@@ -14,7 +14,7 @@ const TextFeatureHorizontal = ({ content, invert }: Props) => {
       className={`${styles.mainLayout} ${invert ? styles.white : styles.black}`}
     >
       <div className={styles.innerLayout}>
-        <h2> {h2}</h2>
+        <h2>{h2}</h2>
         <p>{text}</p>
       </div>
     </div>

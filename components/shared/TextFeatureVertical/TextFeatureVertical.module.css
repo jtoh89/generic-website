@@ -10,12 +10,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* max-width: var(--max-width); */
 }
 
 .mainLayout h2 {
-  font-size: var(--font-size-L);
-  line-height: var(--font-size-l-lineheight);
+  font-size: var(--font-size-XL);
   margin-bottom: var(--space-L);
   font-weight: var(--font-weight-L);
 }

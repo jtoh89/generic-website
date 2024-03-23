@@ -34,6 +34,11 @@
 
 .card h3 {
   margin-top: var(--space-M);
+  font-weight: var(--font-weight-L);
+}
+
+.card h4 {
+  margin-top: var(--space-S);
   font-weight: var(--font-weight-M);
 }
 

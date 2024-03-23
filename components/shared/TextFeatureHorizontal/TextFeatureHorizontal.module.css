@@ -10,11 +10,11 @@
   align-items: center;
   max-width: var(--max-width);
   margin: 0 auto;
+  text-align: left;
 }
 
 .innerLayout h2 {
-  font-size: var(--font-size-L);
-  line-height: var(--font-size-l-lineheight);
+  font-size: var(--font-size-XL);
   margin-bottom: var(--bottom-margin-m);
   font-weight: var(--font-weight-L);
 }

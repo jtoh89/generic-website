@@ -27,8 +27,7 @@
 }
 
 .leftInnerLayout h2 {
-  font-size: var(--font-size-L);
-  line-height: var(--font-size-l-lineheight);
+  font-size: var(--font-size-XL);
   margin-bottom: var(--space-S);
   font-weight: var(--font-weight-L);
 }
