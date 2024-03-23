@@ -6,7 +6,6 @@
 .innerLayout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* max-width: var(--max-width); */
   margin: 0 auto;
 }
 
@@ -14,6 +13,12 @@
   justify-self: start;
   align-items: center;
   padding-right: 30px;
+  margin: auto;
+}
+
+.leftContainer h1 {
+  font-size: var(--font-size-XL);
+  font-weight: var(--font-weight-L);
 }
 
 .leftContainer span {
@@ -22,19 +27,11 @@
   height: 300px;
 }
 
-.leftContainer h1 {
-  font-size: var(--font-size-XL);
-  font-weight: var(--font-weight-L);
-}
-
 .rightContainer {
   position: relative;
-  /* display: flex; */
-  /* align-items: center; */
 }
 
 .image {
-  /* max-width: 85%; */
   display: block;
   margin: auto;
 }

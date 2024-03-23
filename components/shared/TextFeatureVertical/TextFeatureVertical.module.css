@@ -17,6 +17,7 @@
   font-size: var(--font-size-L);
   line-height: var(--font-size-l-lineheight);
   margin-bottom: var(--space-L);
+  font-weight: var(--font-weight-L);
 }
 
 .mainLayout p {
