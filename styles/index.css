@@ -4,10 +4,6 @@ html {
   overflow-x: hidden;
 }
 
-p:not(:last-child) {
-  /* margin-bottom: 0.875rem; */
-}
-
 ol,
 ul {
   margin-left: 1rem;
@@ -30,16 +26,6 @@ body {
 }
 
 * {
-  --space-0: 0;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-4: 20px;
-  --space-5: 32px;
-  --space-6: 52px;
-  --space-7: 84px;
-  --space-8: 136px;
-  --space-9: 220px;
-
   --space-S: 8px;
   --space-M: 20px;
   --space-L: 35px;
@@ -58,27 +44,6 @@ body {
   --line-height-L: 39px;
   --line-height-XL: 58px;
 
-  --font-size-0: 12px;
-  --font-size-1: 14px;
-  --font-size-2: 16px;
-  --font-size-4: 20px;
-  --font-size-5: 24px;
-  --font-size-6: 30px;
-  --font-size-7: 36px;
-  --font-size-10: 72px;
-
-  --line-height-0: 16px;
-  --line-height-1: 20px;
-  --line-height-2: 24px;
-  --line-height-3: 28px;
-  --line-height-4: 28px;
-  --line-height-5: 32px;
-  --line-height-6: 36px;
-  --line-height-7: 40px;
-  --line-height-9: 60px;
-  --line-height-11: 96px;
-  --line-height-12: 128px;
-
   --border-radius-S: 5px;
   --border-radius-M: 15px;
 
@@ -92,23 +57,18 @@ body {
   --tertiary-color: #fff1f9;
   --max-width: 968px;
 
-  --font-weight-3: 800;
+  --font-weight-LIGHT: 300;
+  --font-weight-MEDIUM: 700;
+  --font-weight-HEAVY: 800;
 
   --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
-  --container-padding-x: 20px;
-  --container-padding-y: 50px;
-  --container-padding-yx: 50px 20px;
   --standard-padding-yx: 80px 50px;
   --standard-padding-y: 80px;
   --standard-padding-x: 50px;
-
-  --layout-top-margin: 30px;
-  --layout-bottom-margin: 30px;
 }
 
 .layout-container {
-  /* margin: 0 auto; */
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -123,27 +83,6 @@ body {
 
 main {
   margin-top: 45px;
-}
-
-.header {
-  display: flex;
-  padding: 0 var(--space-1);
-  border-bottom: 1px solid #ced2d9;
-
-  z-index: 10;
-  background: var(--white);
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-}
-
-.footer .footer__text {
-  font-size: var(--font-size-1);
-  line-height: var(--line-height-1);
-  display: flex;
-  align-items: center;
-  gap: 2px;
 }
 
 @media (max-width: 800px) {

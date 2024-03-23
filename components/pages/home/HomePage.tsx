@@ -8,7 +8,7 @@ import type { HomePagePayload } from '@/types'
 
 import Faq from './Faq/Faq'
 import Services from './Services/Services'
-import WhyUs from './WhyUs/WhyUs'
+import CompanyHighlights from './CompanyHighlights/CompanyHighlights'
 
 export interface HomePageProps {
   data: HomePagePayload | null
@@ -19,7 +19,7 @@ export function HomePage({ data }: HomePageProps) {
     <>
       <Hero data={data?.hero} />
       <Services data={data?.services} />
-      <WhyUs data={data?.companyHighlights} />
+      <CompanyHighlights data={data?.companyHighlights} />
       <TextFeatureVertical
         content={{
           h2: data?.ctaSection.header,

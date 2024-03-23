@@ -2,9 +2,9 @@ import React from 'react'
 
 import SelectIcon from '@/components/shared/IconSelector'
 
-import styles from './WhyUs.module.css'
+import styles from './CompanyHighlights.module.css'
 
-const WhyUs = ({ data }) => {
+const CompanyHighlights = ({ data }) => {
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
@@ -35,4 +35,4 @@ const WhyUs = ({ data }) => {
   )
 }
 
-export default WhyUs
+export default CompanyHighlights
