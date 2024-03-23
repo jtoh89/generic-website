@@ -1,4 +1,4 @@
-import { CustomPortableText } from '@/components/shared/CustomPortableText'
+import styles from './Header.module.css'
 
 interface HeaderProps {
   centered?: boolean
@@ -12,18 +12,11 @@ export function Header(props: HeaderProps) {
     return null
   }
   return (
-    <div
-      className={`page-header ${
-        centered
-          ? 'text-center'
-          : // 'w-5/6 lg:w-3/5'
-            ''
-      }`}
-    >
+    <div className={`${styles.pageHeader} ${centered ? 'text-center' : ''}`}>
       {/* Title */}
-      {title && <h1 className="page-title">{title}</h1>}
+      {title && <h1 className={styles.pageTitle}>{title}</h1>}
       {/* Description */}
-      {description && <div className="page-subtitle">{description}</div>}
+      {description && <div className={styles.pageSubtitle}>{description}</div>}
     </div>
   )
 }

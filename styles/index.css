@@ -113,10 +113,6 @@ body {
   padding-bottom: 50px;
 }
 
-.page-header {
-  margin-bottom: var(--space-L);
-}
-
 .page-header-image {
   width: 100%;
   height: 500px;
@@ -124,43 +120,6 @@ body {
   object-fit: cover;
   margin-bottom: var(--space-L);
 }
-
-.page-title {
-  font-size: var(--font-size-XL);
-  line-height: var(--line-height-XL);
-  font-weight: 800;
-  margin-bottom: var(--space-S);
-}
-
-.page-subtitle {
-  font-size: var(--font-size-M);
-  line-height: var(--line-height-S);
-}
-
-.page-section-header {
-  font-size: var(--font-size-L);
-  font-weight: 800;
-  line-height: var(--line-height-L);
-  margin-bottom: var(--space-M);
-}
-
-.page-section-text {
-  font-size: var(--font-size-S);
-  line-height: var(--line-height-S);
-}
-
-.page-section-image {
-  width: 100%;
-  height: 500px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  margin: var(--space-L) 0;
-}
-
-/* Layout */
-/* .container {
-  margin: 0 auto;
-} */
 
 main {
   margin-top: 45px;

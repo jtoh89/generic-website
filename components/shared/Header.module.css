@@ -1,0 +1,15 @@
+.pageHeader {
+  margin-bottom: var(--space-L);
+}
+
+.pageTitle {
+  font-size: var(--font-size-XL);
+  line-height: var(--line-height-XL);
+  font-weight: 800;
+  margin-bottom: var(--space-S);
+}
+
+.pageSubtitle {
+  font-size: var(--font-size-M);
+  line-height: var(--line-height-S);
+}

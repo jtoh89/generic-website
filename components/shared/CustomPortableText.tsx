@@ -7,14 +7,16 @@ import ImageBox from '@/components/shared/ImageBox'
 import { TimelineSection } from '@/components/shared/TimelineSection'
 import { urlForImage } from '@/sanity/lib/image'
 
+import styles from './CustomPortableText.module.css'
+
 export function CustomPortableText({ value }: { value: PortableTextBlock[] }) {
   const components: PortableTextComponents = {
     block: {
       h2: ({ children }) => {
-        return <h2 className="page-section-header">{children}</h2>
+        return <h2 className={styles.h2}>{children}</h2>
       },
       normal: ({ children }) => {
-        return <p className={'page-section-text'}>{children}</p>
+        return <p className={styles.normal}>{children}</p>
       },
     },
     marks: {
@@ -38,13 +40,8 @@ export function CustomPortableText({ value }: { value: PortableTextBlock[] }) {
       }) => {
         return (
           <div className="my-3">
-            {/* <ImageBox
-              image={value}
-              alt={value.alt}
-              classesWrapper="relative aspect-[16/9]"
-            /> */}
             <Image
-              className="page-section-image"
+              className={styles.image}
               src={urlForImage(value).url()}
               height={231}
               width={367}

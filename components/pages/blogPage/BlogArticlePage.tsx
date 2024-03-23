@@ -27,7 +27,7 @@ export function BlogArticlePage({ data }: PageProps) {
   return (
     <section className={styles.page}>
       <div className={styles.pageContent}>
-        <Header title={title} description={subTitle} />
+        <Header title={data?.title} description={data?.subTitle} />
 
         {headerImage && (
           <Image

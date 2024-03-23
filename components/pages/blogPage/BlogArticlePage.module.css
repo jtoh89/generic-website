@@ -1,6 +1,6 @@
 .page {
   width: 100%;
-  padding-top: 0 var(--container-padding-x);
+  padding-top: 0 var(--standard-padding-x);
   padding-bottom: var(--standard-padding-y);
 }
 
