@@ -17,7 +17,7 @@ export const locate: DocumentLocationResolver = (params, context) => {
   if (
     params.type === 'home' ||
     params.type === 'about' ||
-    params.type === 'page' ||
+    params.type === 'blogArticles' ||
     params.type === 'project'
   ) {
     const doc$ = context.documentStore.listenQuery(
@@ -74,7 +74,7 @@ export const locate: DocumentLocationResolver = (params, context) => {
                   tone: 'critical',
                   message: `The top menu isn't linking to the about page. This might make it difficult for visitors to navigate your site.`,
                 } satisfies DocumentLocationsState)
-          case 'page':
+          case 'blogArticles':
             return {
               locations: docs
                 ?.map((doc) => {

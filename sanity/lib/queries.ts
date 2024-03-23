@@ -29,7 +29,7 @@ export const aboutPageQuery = groq`
 `
 
 export const pagesBySlugQuery = groq`
-  *[_type == "page" && slug.current == $slug][0] {
+  *[_type == "blogArticles" && slug.current == $slug][0] {
     _id,
     body,
     headerImage,
@@ -42,7 +42,7 @@ export const pagesBySlugQuery = groq`
 `
 
 export const allPagesQuery = groq`
-  *[_type == "page"] {
+  *[_type == "blogArticles"] {
     _id,
     title,
     "slug": slug.current,

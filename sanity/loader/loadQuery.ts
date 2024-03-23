@@ -72,7 +72,7 @@ export function loadSettings() {
   return loadQuery<SettingsPayload>(
     settingsQuery,
     {},
-    { next: { tags: ['settings', 'home', 'page', 'project'] } },
+    { next: { tags: ['settings', 'home', 'blogArticles', 'project'] } },
   )
 }
 
@@ -104,7 +104,7 @@ export function loadPage(slug: string) {
   return loadQuery<BlogArticlePayload | null>(
     pagesBySlugQuery,
     { slug },
-    { next: { tags: [`page:${slug}`] } },
+    { next: { tags: [`blogArticles:${slug}`] } },
   )
 }
 

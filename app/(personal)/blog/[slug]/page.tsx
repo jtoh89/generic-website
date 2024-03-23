@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 
-import { BlogPage } from '@/components/pages/blogPage/BlogArticlePage'
+import { BlogArticlePage } from '@/components/pages/blogPage/BlogArticlePage'
 import { generateStaticSlugs } from '@/sanity/loader/generateStaticSlugs'
 import { loadPage } from '@/sanity/loader/loadQuery'
 import { pageStructure } from '@/sanity/plugins/settings'
@@ -37,7 +37,7 @@ export async function generateMetadata(
 }
 
 export function generateStaticParams() {
-  return generateStaticSlugs('page')
+  return generateStaticSlugs('blogArticles')
 }
 
 export default async function PageSlugRoute({ params }: Props) {
@@ -51,5 +51,5 @@ export default async function PageSlugRoute({ params }: Props) {
     notFound()
   }
 
-  return <BlogPage data={initial.data} />
+  return <BlogArticlePage data={initial.data} />
 }

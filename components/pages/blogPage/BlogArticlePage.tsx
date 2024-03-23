@@ -19,7 +19,7 @@ export async function generateMetadata(
   }
 }
 
-export function BlogPage({ data }: PageProps) {
+export function BlogArticlePage({ data }: PageProps) {
   const { headerImage, body, subTitle, title, publishDate } = data ?? {}
 
   return (
@@ -46,4 +46,4 @@ export function BlogPage({ data }: PageProps) {
   )
 }
 
-export default BlogPage
+export default BlogArticlePage
