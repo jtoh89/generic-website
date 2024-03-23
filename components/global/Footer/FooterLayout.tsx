@@ -12,9 +12,6 @@ interface FooterProps {
   data: SettingsPayload
 }
 export default function Footer(props: FooterProps) {
-  const { data } = props
-  const footer = data?.footer || ([] as PortableTextBlock[])
-
   return (
     <footer>
       <div className={styles.mainLayout}>
@@ -59,10 +56,10 @@ export default function Footer(props: FooterProps) {
               <Link href="/about">About</Link>
             </li>
             <li>
-              <Link href="/">Privacy Policy</Link>
+              <Link href="/privacy-policy">Privacy Policy</Link>
             </li>
             <li>
-              <Link href="/">Terms of Services</Link>
+              <Link href="/terms-and-conditions">Terms of Services</Link>
             </li>
           </div>
         </div>
