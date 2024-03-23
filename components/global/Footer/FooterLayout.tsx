@@ -32,20 +32,11 @@ export default function Footer(props: FooterProps) {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/how-it-works">How it works</Link>
-            </li>
-            <li>
-              <Link href="/pricing">Pricing</Link>
-            </li>
-            <li>
               <Link href="/">About Us</Link>
             </li>
           </div>
           <div className={styles.footerMenu}>
             <h3>Learn</h3>
-            <li>
-              <Link href="/">Help Center</Link>
-            </li>
             <li>
               <Link href="/blog">Blog</Link>
             </li>

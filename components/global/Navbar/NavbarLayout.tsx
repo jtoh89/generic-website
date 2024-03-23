@@ -56,13 +56,8 @@ export default function Navbar(props: NavbarProps) {
         <div className={styles.menu}>
           <ul>
             <li>
-              <Link href="/how-it-works" onClick={() => toggleSlider(false)}>
-                How it works
-              </Link>
-            </li>
-            <li>
-              <Link href="/pricing" onClick={() => toggleSlider(false)}>
-                Pricing
+              <Link href="/" onClick={() => toggleSlider(false)}>
+                Home
               </Link>
             </li>
             <li>
