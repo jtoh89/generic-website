@@ -15,7 +15,7 @@ import {
 import { token } from '@/sanity/lib/token'
 import {
   AboutPagePayload,
-  BlogPagePayload,
+  BlogArticlePayload,
   BlogPayload,
   HomePagePayload,
   ProjectPayload,
@@ -101,7 +101,7 @@ export function loadProject(slug: string) {
 }
 
 export function loadPage(slug: string) {
-  return loadQuery<BlogPagePayload | null>(
+  return loadQuery<BlogArticlePayload | null>(
     pagesBySlugQuery,
     { slug },
     { next: { tags: [`page:${slug}`] } },

@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 
-import { BlogPage } from '@/components/pages/blogPage/BlogPage'
+import { BlogPage } from '@/components/pages/blogPage/BlogArticlePage'
 import { generateStaticSlugs } from '@/sanity/loader/generateStaticSlugs'
 import { loadPage } from '@/sanity/loader/loadQuery'
 import { pageStructure } from '@/sanity/plugins/settings'

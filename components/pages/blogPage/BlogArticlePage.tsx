@@ -4,10 +4,10 @@ import Image from 'next/image'
 import { CustomPortableText } from '@/components/shared/CustomPortableText'
 import { Header } from '@/components/shared/Header'
 import { urlForImage } from '@/sanity/lib/image'
-import type { BlogPagePayload } from '@/types'
+import type { BlogArticlePayload } from '@/types'
 
 export interface PageProps {
-  data: BlogPagePayload | null
+  data: BlogArticlePayload | null
 }
 
 export async function generateMetadata(

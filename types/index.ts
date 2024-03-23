@@ -54,7 +54,7 @@ export interface AboutPagePayload {
   footer?: PortableTextBlock[]
 }
 
-export interface BlogPagePayload {
+export interface BlogArticlePayload {
   body?: PortableTextBlock[]
   publishDate: string
   headerImage?: Image

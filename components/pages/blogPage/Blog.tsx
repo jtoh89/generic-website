@@ -11,12 +11,12 @@ import { CustomPortableText } from '@/components/shared/CustomPortableText'
 import { Header } from '@/components/shared/Header'
 import SharedHero from '@/components/shared/Hero/SharedHero'
 import { urlForImage } from '@/sanity/lib/image'
-import type { BlogPagePayload } from '@/types'
+import type { BlogArticlePayload } from '@/types'
 
 import styles from './Blog.module.css'
 
 export interface Props {
-  data: BlogPagePayload[] | null
+  data: BlogArticlePayload[] | null
 }
 
 function shortenString(str, maxChars) {
