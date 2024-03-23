@@ -11,7 +11,9 @@ type Props = {
 }
 const FeatureImage = ({ content, invert }: Props) => {
   return (
-    <div className={`${invert ? styles.white : styles.black}`}>
+    <div
+      className={`${styles.container} ${invert ? styles.white : styles.black}`}
+    >
       <div className={styles.innerLayout}>
         <div className={styles.leftLayout}>
           <div className={styles.leftInnerLayout}>

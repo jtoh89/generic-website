@@ -15,22 +15,24 @@ const Faq = ({ data }) => {
   const itemsOndData = Object.keys(data).length
 
   return (
-    <section className={styles.faqContainer}>
-      <div className={styles.title}>
-        <h2>Frequently Asked Questions</h2>
+    <section className={styles.container}>
+      <div className={styles.faqContainer}>
+        <div className={styles.title}>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        {data.map((item, index) => (
+          <React.Fragment key={item.title}>
+            <FaqItem
+              open={index === indexopen}
+              title={item.question}
+              onClick={() => handleClick(index)}
+            >
+              {item.answer}
+            </FaqItem>
+            {itemsOndData - index < 2 ? null : <Line />}
+          </React.Fragment>
+        ))}
       </div>
-      {data.map((item, index) => (
-        <React.Fragment key={item.title}>
-          <FaqItem
-            open={index === indexopen}
-            title={item.question}
-            onClick={() => handleClick(index)}
-          >
-            {item.answer}
-          </FaqItem>
-          {itemsOndData - index < 2 ? null : <Line />}
-        </React.Fragment>
-      ))}
     </section>
   )
 }

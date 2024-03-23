@@ -1,3 +1,7 @@
+.container {
+  padding: var(--standard-padding-yx);
+}
+
 .innerLayout {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -5,7 +9,6 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20%;
   min-height: 400px;
-  padding: var(--standard-padding-yx);
 }
 
 .leftLayout {
