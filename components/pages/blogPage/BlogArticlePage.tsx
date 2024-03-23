@@ -6,6 +6,8 @@ import { Header } from '@/components/shared/Header'
 import { urlForImage } from '@/sanity/lib/image'
 import type { BlogArticlePayload } from '@/types'
 
+import styles from './BlogArticlePage.module.css'
+
 export interface PageProps {
   data: BlogArticlePayload | null
 }
@@ -23,8 +25,8 @@ export function BlogArticlePage({ data }: PageProps) {
   const { headerImage, body, subTitle, title, publishDate } = data ?? {}
 
   return (
-    <section className="page">
-      <div className="page-content">
+    <section className={styles.page}>
+      <div className={styles.pageContent}>
         <Header title={title} description={subTitle} />
 
         {headerImage && (
@@ -36,11 +38,7 @@ export function BlogArticlePage({ data }: PageProps) {
             alt=""
           />
         )}
-
-        {/* Body */}
         {body && <CustomPortableText value={body} />}
-        {/* </div> */}
-        {/* <div className="absolute left-0 w-screen border-t" /> */}
       </div>
     </section>
   )

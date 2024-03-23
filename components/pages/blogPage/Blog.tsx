@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
-import { Header } from '@/components/shared/Header'
 import SharedHero from '@/components/shared/Hero/SharedHero'
 import { urlForImage } from '@/sanity/lib/image'
 import type { BlogArticlePayload, BlogPayload } from '@/types'

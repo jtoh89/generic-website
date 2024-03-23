@@ -113,11 +113,6 @@ body {
   padding-bottom: 50px;
 }
 
-.page {
-  width: 100%;
-  padding-top: 0 var(--container-padding-x);
-}
-
 .page-header {
   margin-bottom: var(--space-L);
 }
@@ -140,16 +135,6 @@ body {
 .page-subtitle {
   font-size: var(--font-size-M);
   line-height: var(--line-height-S);
-}
-
-.page-content {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.page-content a {
-  color: var(--blue-600);
-  text-decoration: none;
 }
 
 .page-section-header {
