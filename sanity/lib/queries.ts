@@ -28,6 +28,14 @@ export const aboutPageQuery = groq`
   }
 `
 
+export const blogPageQuery = groq`
+  *[_type == "blog"][0]{
+    _id,
+    seo,
+    hero,
+  }
+`
+
 export const pagesBySlugQuery = groq`
   *[_type == "blogArticles" && slug.current == $slug][0] {
     _id,

@@ -17,6 +17,7 @@ export const locate: DocumentLocationResolver = (params, context) => {
   if (
     params.type === 'home' ||
     params.type === 'about' ||
+    params.type === 'blog' ||
     params.type === 'blogArticles' ||
     params.type === 'project'
   ) {
@@ -73,6 +74,24 @@ export const locate: DocumentLocationResolver = (params, context) => {
               : ({
                   tone: 'critical',
                   message: `The top menu isn't linking to the about page. This might make it difficult for visitors to navigate your site.`,
+                } satisfies DocumentLocationsState)
+          case 'blog':
+            return isReferencedBySettings
+              ? ({
+                  locations: [
+                    {
+                      title:
+                        docs?.find((doc) => doc._type === 'blog')?.title ||
+                        'Blog page title',
+                      href: resolveHref(params.type)!,
+                    },
+                  ],
+                  tone: 'positive',
+                  message: 'This document is used to render the blog page',
+                } satisfies DocumentLocationsState)
+              : ({
+                  tone: 'critical',
+                  message: `The top menu isn't linking to the blog page. This might make it difficult for visitors to navigate your site.`,
                 } satisfies DocumentLocationsState)
           case 'blogArticles':
             return {

@@ -4,8 +4,6 @@ export default defineType({
   name: 'about',
   title: 'About',
   type: 'document',
-  // Uncomment below to have edits publish automatically as you type
-  // liveEdit: true,
   fields: [
     defineField({
       title: 'SEO SECTION',

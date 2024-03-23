@@ -6,16 +6,16 @@ import { notFound } from 'next/navigation'
 
 import { Blog } from '@/components/pages/blogPage/Blog'
 import { generateStaticSlugs } from '@/sanity/loader/generateStaticSlugs'
-import { allBlogPages } from '@/sanity/loader/loadQuery'
+import { allBlogPages, loadBlogPage } from '@/sanity/loader/loadQuery'
 
-const PagePreview = dynamic(() => import('@/components/pages/blogPage/Blog'))
+export async function generateMetadata(): Promise<Metadata> {
+  const { data: blogPage } = await loadBlogPage()
 
-export async function generateMetadata(
-  parent: ResolvingMetadata,
-): Promise<Metadata> {
+  console.log('JonO blogPage: ', blogPage)
+
   return {
-    title: 'Blog Page',
-    description: 'Blog Page Placeholder',
+    title: blogPage?.seo.metaTitle,
+    description: blogPage?.seo.metaDescription,
   }
 }
 

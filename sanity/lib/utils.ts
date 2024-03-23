@@ -30,6 +30,8 @@ export function resolveHref(
       return '/'
     case 'about':
       return '/about'
+    case 'blog':
+      return '/blog'
     case 'blogArticles':
       return slug ? `/${slug}` : undefined
     case 'project':

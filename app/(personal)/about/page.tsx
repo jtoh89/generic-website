@@ -1,8 +1,8 @@
+import { Metadata, ResolvingMetadata } from 'next'
 import dynamic from 'next/dynamic'
 
 import { AboutPage } from '@/components/pages/about/AboutPage'
 import { loadAboutPage } from '@/sanity/loader/loadQuery'
-import { Metadata, ResolvingMetadata } from 'next'
 
 const AboutPagePreview = dynamic(
   () => import('@/components/pages/about/AboutPage'),

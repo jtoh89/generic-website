@@ -7,6 +7,7 @@ import { client } from '@/sanity/lib/client'
 import {
   aboutPageQuery,
   allPagesQuery,
+  blogPageQuery,
   homePageQuery,
   pagesBySlugQuery,
   projectBySlugQuery,
@@ -15,6 +16,7 @@ import {
 import { token } from '@/sanity/lib/token'
 import {
   AboutPagePayload,
+  BlogPayload,
   BlogArticlePayload,
   BlogArticleCardPayload,
   HomePagePayload,
@@ -97,6 +99,14 @@ export function loadProject(slug: string) {
     projectBySlugQuery,
     { slug },
     { next: { tags: [`project:${slug}`] } },
+  )
+}
+
+export function loadBlogPage() {
+  return loadQuery<BlogPayload | null>(
+    blogPageQuery,
+    {},
+    { next: { tags: ['blog'] } },
   )
 }
 

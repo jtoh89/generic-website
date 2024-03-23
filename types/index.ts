@@ -54,6 +54,11 @@ export interface AboutPagePayload {
   footer?: PortableTextBlock[]
 }
 
+export interface BlogPayload {
+  seo: any
+  hero: any
+}
+
 export interface BlogArticlePayload {
   body?: PortableTextBlock[]
   publishDate: string
