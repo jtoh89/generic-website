@@ -12,10 +12,9 @@ import WhyUs from './WhyUs/WhyUs'
 
 export interface HomePageProps {
   data: HomePagePayload | null
-  encodeDataAttribute?: EncodeDataAttributeCallback
 }
 
-export function HomePage({ data, encodeDataAttribute }: HomePageProps) {
+export function HomePage({ data }: HomePageProps) {
   return (
     <>
       <Hero data={data?.hero} />

@@ -2,7 +2,12 @@ import React from 'react'
 
 import styles from './TextFeatureHorizontal.module.css'
 
-const TextFeatureHorizontal = ({ content, invert }) => {
+type Props = {
+  content: any
+  invert: boolean
+}
+
+const TextFeatureHorizontal = ({ content, invert }: Props) => {
   const { h2, text } = content
   return (
     <div

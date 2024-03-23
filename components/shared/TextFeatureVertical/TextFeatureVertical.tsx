@@ -8,7 +8,7 @@ type Props = {
   ctaButtonText?: string
 }
 
-const TextFeatureVertical = ({ content, ctaButtonText }) => {
+const TextFeatureVertical = ({ content, ctaButtonText }: Props) => {
   const { h2, text } = content
 
   return (

@@ -11,16 +11,16 @@ import type { BlogArticlePayload, BlogPayload } from '@/types'
 
 import styles from './Blog.module.css'
 
-export interface Props {
-  data: BlogArticlePayload[] | null
-  config: BlogPayload | null
-}
-
 function shortenString(str, maxChars) {
   if (str.length > maxChars) {
     return str.substring(0, maxChars) + '...'
   }
   return str
+}
+
+export interface Props {
+  data: BlogArticlePayload[] | null
+  config: BlogPayload | null
 }
 
 export function Blog({ data, config }: Props) {
