@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export function generateStaticParams() {
-  return generateStaticSlugs('page')
+  return generateStaticSlugs('blogArticles')
 }
 
 export default async function PageSlugRoute(Props) {

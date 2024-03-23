@@ -1,4 +1,3 @@
-import type { PortableTextBlock } from '@portabletext/types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'
@@ -18,7 +17,7 @@ export default function Footer(props: FooterProps) {
         <div className={styles.innerLayout}>
           <div className={styles.footerMenu}>
             <div>
-              <Image className={styles.logo} src={Logo} alt="" />
+              <Image className={styles.logo} src={Logo} alt="Company Logo" />
             </div>
             <div className={styles.social}>
               <FaFacebook className={styles.socialItem} size={30} />

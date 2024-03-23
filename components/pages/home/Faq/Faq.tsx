@@ -21,7 +21,7 @@ const Faq = ({ data }) => {
           <h2>Frequently Asked Questions</h2>
         </div>
         {data.map((item, index) => (
-          <React.Fragment key={item.title}>
+          <React.Fragment key={index}>
             <FaqItem
               open={index === indexopen}
               title={item.question}

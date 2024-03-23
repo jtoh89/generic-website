@@ -57,6 +57,13 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      fields: [
+        defineField({
+          name: 'altText',
+          type: 'string',
+          title: 'Alt text',
+        }),
+      ],
     }),
     defineField({
       type: 'array',
@@ -115,16 +122,9 @@ export default defineType({
           },
           fields: [
             defineField({
-              title: 'Caption',
-              name: 'caption',
-              type: 'string',
-            }),
-            defineField({
-              name: 'alt',
+              name: 'altText',
               type: 'string',
               title: 'Alt text',
-              description:
-                'Alternative text for screenreaders. Falls back on caption if not set',
             }),
           ],
         }),

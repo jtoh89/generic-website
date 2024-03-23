@@ -13,8 +13,6 @@ export interface PageProps {
 }
 
 export function LegalPage({ data }: PageProps) {
-  console.log('JonO LegalPage data', data)
-
   return (
     <section className={styles.container}>
       <div className={styles.content}>

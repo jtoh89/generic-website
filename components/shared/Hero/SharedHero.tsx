@@ -6,6 +6,8 @@ import { urlForImage } from '@/sanity/lib/image'
 import styles from './SharedHero.module.css'
 
 const SharedHero = ({ title, image }) => {
+  console.log('JonO ShareHero image', image)
+
   return (
     <div className={`${styles.mainLayout}`}>
       <div className={styles.innerLayout}>
@@ -21,7 +23,7 @@ const SharedHero = ({ title, image }) => {
             src={urlForImage(image).url()}
             fill
             style={{ objectFit: 'cover' }}
-            alt={image.alt}
+            alt={image.altText}
           />
         </div>
       </div>

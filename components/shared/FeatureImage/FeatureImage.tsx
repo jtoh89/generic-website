@@ -10,6 +10,8 @@ type Props = {
   invert: boolean
 }
 const FeatureImage = ({ content, invert }: Props) => {
+  console.log('JonO feature image', content)
+
   return (
     <div
       className={`${styles.container} ${invert ? styles.white : styles.black}`}
@@ -27,7 +29,7 @@ const FeatureImage = ({ content, invert }: Props) => {
             src={urlForImage(content.image).url()}
             height={231}
             width={367}
-            alt=""
+            alt={content.image.altText}
           />
         </div>
       </div>

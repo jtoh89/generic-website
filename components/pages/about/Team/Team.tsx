@@ -18,7 +18,7 @@ const Team = ({ teamMembers }) => {
                 src={urlForImage(teamMember.image).url()}
                 fill
                 style={{ objectFit: 'cover' }}
-                alt=""
+                alt={teamMember.altText}
               />
             </div>
             <h3>{teamMember.fullName}</h3>

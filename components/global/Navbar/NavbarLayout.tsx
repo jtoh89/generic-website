@@ -24,7 +24,7 @@ export default function Navbar(props: NavbarProps) {
     <div className={styles.mainLayout}>
       <div className={styles.mobileNav}>
         <Link href="/" onClick={() => toggleSlider(false)}>
-          <Image className={styles.logo} src={Logo} alt="" />
+          <Image className={styles.logo} src={Logo} alt="Company Logo" />
         </Link>
         <FaBars
           className={styles.hamburger}
@@ -51,7 +51,7 @@ export default function Navbar(props: NavbarProps) {
           )}
         </div>
         <Link href="/" onClick={() => toggleSlider(false)}>
-          <Image className={styles.logo} src={Logo} alt="" />
+          <Image className={styles.logo} src={Logo} alt="Company Logo" />
         </Link>
         <div className={styles.menu}>
           <ul>

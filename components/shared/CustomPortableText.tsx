@@ -15,8 +15,6 @@ export function CustomPortableText({ value }: { value: PortableTextBlock[] }) {
         return <h2 className={styles.h2}>{children}</h2>
       },
       normal: ({ children }) => {
-        console.log('JonO normal children', children)
-
         return <p className={styles.normal}>{children}</p>
       },
     },
@@ -42,7 +40,7 @@ export function CustomPortableText({ value }: { value: PortableTextBlock[] }) {
       image: ({
         value,
       }: {
-        value: sanityImage & { alt?: string; caption?: string }
+        value: sanityImage & { altText?: string; caption?: string }
       }) => {
         return (
           <div className="my-3">
@@ -51,7 +49,7 @@ export function CustomPortableText({ value }: { value: PortableTextBlock[] }) {
               src={urlForImage(value).url()}
               height={231}
               width={367}
-              alt={value.alt || ''}
+              alt={value.altText || ''}
             />
             {value?.caption && (
               <div className="font-sans text-sm text-gray-600">

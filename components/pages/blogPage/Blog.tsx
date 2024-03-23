@@ -41,16 +41,7 @@ export function Blog({ data, config }: Props) {
     <div className={styles.container}>
       <SharedHero title={config?.hero.header} image={config?.hero.image} />
       <div className={`${styles.innerContainer}`}>
-        {itemsToDisplay?.map((blog, i) => (
-          <BlogCard
-            key={i}
-            title={blog.title}
-            headerImage={blog.headerImage}
-            slug={blog.slug}
-            subTitle={blog.subTitle}
-            publishDate={blog.publishDate}
-          />
-        ))}
+        {itemsToDisplay?.map((blog, i) => <BlogCard key={i} blog={blog} />)}
       </div>
       <div className={styles.paginatin}>
         <Pagination
@@ -66,28 +57,28 @@ export function Blog({ data, config }: Props) {
   )
 }
 
-const BlogCard = ({ headerImage, slug, title, subTitle, publishDate }) => {
+const BlogCard = ({ blog }) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardImageContainer}>
-        <Link href={`/blog/${slug}`}>
+        <Link href={`/blog/${blog.slug}`}>
           <Image
             className={styles.cardImage}
-            src={urlForImage(headerImage)?.url() || ''}
+            src={urlForImage(blog.headerImage)?.url() || ''}
             objectFit="cover"
             fill={true}
-            alt=""
+            alt={blog.headerImage.altText}
           />
         </Link>
       </div>
       <div className={styles.cardContent}>
         <h2>
-          <Link href={`/blog/${slug}`}>{title}</Link>
+          <Link href={`/blog/${blog.slug}`}>{blog.title}</Link>
         </h2>
-        <p className={styles.date}>{publishDate}</p>
-        <p>{shortenString(subTitle || '', 100)}</p>
+        <p className={styles.date}>{blog.publishDate}</p>
+        <p>{shortenString(blog.subTitle || '', 100)}</p>
         <p className={styles.continueRead}>
-          <Link href={`/blog/${slug}`}>Continue Reading</Link>
+          <Link href={`/blog/${blog.slug}`}>Continue Reading</Link>
         </p>
       </div>
     </div>

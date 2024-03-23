@@ -33,7 +33,7 @@ export function BlogArticlePage({ data }: PageProps) {
             src={urlForImage(data?.headerImage).url()}
             height={231}
             width={367}
-            alt=""
+            alt={data?.headerImage.altText || ''}
           />
         )}
         {data?.body && <CustomPortableText value={data?.body} />}
