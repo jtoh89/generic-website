@@ -27,8 +27,9 @@ const FeatureImage = ({ content, invert }: Props) => {
         <div className={styles.rightLayout}>
           <Image
             src={urlForImage(content.image).url()}
-            height={231}
-            width={367}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
             alt={content.image.altText}
           />
         </div>
