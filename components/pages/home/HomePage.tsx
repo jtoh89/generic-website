@@ -7,6 +7,7 @@ import type { HomePagePayload } from '@/types'
 import CompanyHighlights from './CompanyHighlights/CompanyHighlights'
 import Faq from './Faq/Faq'
 import Services from './Services/Services'
+import Testimonials from './Testimonials/Testimonials'
 
 export interface HomePageProps {
   data: HomePagePayload | null
@@ -18,6 +19,7 @@ export function HomePage({ data }: HomePageProps) {
       <Hero data={data?.hero} />
       <Services data={data?.services} />
       <CompanyHighlights data={data?.companyHighlights} />
+      <Testimonials />
       <TextFeatureVertical
         content={{
           h2: data?.ctaSection.header,
@@ -36,6 +38,15 @@ export function HomePage({ data }: HomePageProps) {
         invert={false}
         content={{
           smallHeader: data?.featureImage.smallHeader,
+          h2: data?.featureImage.header,
+          text: data?.featureImage.description,
+          image: data?.featureImage.image,
+        }}
+      />
+      <FeatureImage
+        invert={false}
+        content={{
+          smallHeader: 'Short Header Here',
           h2: data?.featureImage.header,
           text: data?.featureImage.description,
           image: data?.featureImage.image,

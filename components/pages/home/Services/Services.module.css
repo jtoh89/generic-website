@@ -6,18 +6,19 @@
 
 .container h2 {
   font-size: var(--font-size-S);
-  font-weight: var(--font-weight-XL);
+  /* font-weight: var(--font-weight-XL); */
 }
 
 .container h3 {
   font-size: var(--font-size-XL);
-  font-weight: var(--font-weight-S);
+  line-height: var(--line-height-XL);
+  font-weight: var(--font-weight-L);
+  margin-bottom: var(--space-L);
 }
 
 .cardContainer {
   max-width: var(--max-width);
   margin: auto;
-  margin-top: var(--space-L);
 }
 
 .innerContainer {

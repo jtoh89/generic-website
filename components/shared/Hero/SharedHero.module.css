@@ -18,6 +18,7 @@
 
 .leftContainer h1 {
   font-size: var(--font-size-XL);
+  line-height: var(--line-height-XL);
   font-weight: var(--font-weight-L);
 }
 

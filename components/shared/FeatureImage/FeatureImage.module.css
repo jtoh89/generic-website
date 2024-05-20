@@ -20,16 +20,17 @@
   margin: auto;
 }
 
+.leftInnerLayout h2 {
+  font-size: var(--font-size-XL);
+  line-height: var(--line-height-XL);
+  margin-bottom: var(--space-S);
+  font-weight: var(--font-weight-L);
+}
+
 .leftInnerLayout h4 {
   font-size: var(--font-size-XS);
   margin-bottom: var(--bottom-margin-s);
   font-weight: var(--font-weight-M);
-}
-
-.leftInnerLayout h2 {
-  font-size: var(--font-size-XL);
-  margin-bottom: var(--space-S);
-  font-weight: var(--font-weight-L);
 }
 
 .leftInnerLayout p {

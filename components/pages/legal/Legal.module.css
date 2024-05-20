@@ -4,6 +4,7 @@
 
 .content h1 {
   font-size: var(--font-size-XL);
+  line-height: var(--line-height-XL);
   margin-bottom: var(--space-S);
   font-weight: var(--font-weight-XL);
 }

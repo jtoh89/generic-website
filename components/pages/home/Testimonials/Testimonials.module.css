@@ -1,0 +1,52 @@
+.container {
+  margin: auto;
+  text-align: center;
+  padding: var(--standard-padding-yx);
+}
+
+.container h2 {
+  font-size: var(--font-size-S);
+}
+
+.container h3 {
+  font-size: var(--font-size-XL);
+  line-height: var(--line-height-XL);
+  font-weight: var(--font-weight-L);
+  margin-bottom: var(--space-L);
+}
+
+.testimonialsContainer {
+  max-width: var(--max-width);
+  margin: auto;
+  min-height: 200px;
+}
+
+.testimonial h4 {
+  font-size: var(--font-size-L);
+  line-height: var(--line-height-L);
+  font-weight: var(--font-weight-M);
+  margin-bottom: var(--space-L);
+}
+
+.toggleContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: var(--space-L);
+}
+
+.toggle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+  cursor: pointer;
+}
+
+.circle:hover {
+  background-color: #333;
+}
+
+.active {
+  background-color: #333;
+}
